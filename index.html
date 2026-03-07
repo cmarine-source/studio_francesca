@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio Odontoiatrico Dott.ssa Francesca Capasso. Cura, prevenzione e benessere per la salute del tuo sorriso. Odontoiatria pediatrica, ortodonzia, gnatologia e trattamenti personalizzati.">
+    <meta name="keywords" content="studio odontoiatrico, dentista, prevenzione odontoiatrica, ortodonzia, odontoiatria pediatrica, gnatologia, Dott.ssa Francesca Capasso">
+    <title>Dott.ssa Francesca Capasso – Studio Odontoiatrico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 50%, #e0f2fe 100%);
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        .text-blue-navy { color: #1e3a8a; }
+        .text-blue-dark { color: #1e40af; }
+        .text-blue-medium { color: #3b82f6; }
+        .text-blue-light { color: #60a5fa; }
+        .bg-blue-navy { background-color: #1e3a8a; }
+        .bg-blue-dark { background-color: #1e40af; }
+        .bg-blue-medium { background-color: #3b82f6; }
+        .bg-blue-light { background-color: #60a5fa; }
+        .border-blue-navy { border-color: #1e3a8a; }
+        .border-blue-medium { border-color: #3b82f6; }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur shadow-sm py-4">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-blue-dark flex items-center justify-center mr-3">
+                        <i data-lucide="tooth" class="text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-blue-navy font-bold text-xl">Studio Odontoiatrico</h1>
+                        <p class="text-blue-medium text-sm">Dott.ssa Francesca Capasso</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-blue-navy font-medium hover:text-blue-medium transition">Home</a>
+                    <a href="studio.html" class="text-gray-700 font-medium hover:text-blue-medium transition">Lo Studio</a>
+                    <a href="servizi.html" class="text-gray-700 font-medium hover:text-blue-medium transition">Servizi</a>
+                    <a href="tecnologie.html" class="text-gray-700 font-medium hover:text-blue-medium transition">Tecnologie</a>
+                    <a href="contatti.html" class="text-gray-700 font-medium hover:text-blue-medium transition">Contatti</a>
+                </div>
+
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:block">
+                    <a href="contatti.html#prenota" class="bg-blue-medium text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-dark transition">Prenota una visita</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-blue-navy">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="index.html" class="text-blue-navy font-medium">Home</a>
+                    <a href="studio.html" class="text-gray-700 font-medium">Lo Studio</a>
+                    <a href="servizi.html" class="text-gray-700 font-medium">Servizi</a>
+                    <a href="tecnologie.html" class="text-gray-700 font-medium">Tecnologie</a>
+                    <a href="contatti.html" class="text-gray-700 font-medium">Contatti</a>
+                    <a href="contatti.html#prenota" class="bg-blue-medium text-white px-4 py-2 rounded-lg font-medium text-center mt-2">Prenota una visita</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 hero-gradient md:pt-32 md:pb-24">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-blue-navy mb-4">
+                        Studio Odontoiatrico<br>
+                        <span class="text-blue-dark">Dott.ssa Francesca Capasso</span>
+                    </h1>
+                    <p class="text-xl text-blue-medium mb-8">
+                        Cura, prevenzione e benessere per la salute del tuo sorriso
+                    </p>
+                    <p class="text-gray-700 mb-8 text-lg">
+                        Un approccio personalizzato all'odontoiatria, dove la salute orale si unisce al comfort del paziente e all'utilizzo delle tecnologie più avanzate.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="contatti.html#prenota" class="bg-blue-medium text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-dark transition text-center">
+                            Prenota una visita
+                        </a>
+                        <a href="tel:+390612345678" class="border-2 border-blue-medium text-blue-medium px-8 py-4 rounded-lg font-medium hover:bg-blue-light hover:bg-opacity-10 transition text-center">
+                            Chiama ora
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="http://static.photos/medical/1200x630/1" alt="Studio Odontoiatrico moderno e accogliente" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section-padding">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-navy mb-4">La nostra filosofia</h2>
+                <p class="text-blue-medium text-xl max-w-3xl mx-auto">
+                    Prevenzione, cura personalizzata e attenzione al paziente sono i pilastri del nostro approccio
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale border-t-4 border-blue-medium">
+                    <div class="w-16 h-16 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mb-6">
+                        <i data-lucide="heart" class="text-blue-medium w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-4">Prevenzione</h3>
+                    <p class="text-gray-700">
+                        Crediamo che la prevenzione sia il primo passo verso una salute orale duratura. Controlli regolari e igiene professionale sono fondamentali.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale border-t-4 border-blue-medium">
+                    <div class="w-16 h-16 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="text-blue-medium w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-4">Cura personalizzata</h3>
+                    <p class="text-gray-700">
+                        Ogni paziente è unico. Creiamo piani di trattamento personalizzati che considerano le esigenze specifiche e gli obiettivi di ciascuno.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale border-t-4 border-blue-medium">
+                    <div class="w-16 h-16 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="text-blue-medium w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-4">Massima sicurezza</h3>
+                    <p class="text-gray-700">
+                        Utilizziamo protocolli di sterilizzazione avanzati e tecnologie all'avanguardia per garantire la massima sicurezza durante ogni trattamento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-navy mb-4">I nostri servizi</h2>
+                <p class="text-blue-medium text-xl max-w-3xl mx-auto">
+                    Un'ampia gamma di trattamenti per prendersi cura del sorriso di tutta la famiglia
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-blue-light flex items-center justify-center mb-6">
+                        <i data-lucide="shield" class="text-blue-navy w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-3">Prevenzione odontoiatrica</h3>
+                    <p class="text-gray-700 mb-4">
+                        Igiene professionale, controlli periodici e diagnosi precoce per mantenere la salute del tuo sorriso.
+                    </p>
+                    <a href="servizi.html#prevenzione" class="text-blue-medium font-medium inline-flex items-center">
+                        Scopri di più
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-blue-light flex items-center justify-center mb-6">
+                        <i data-lucide="baby" class="text-blue-navy w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-3">Odontoiatria pediatrica</h3>
+                    <p class="text-gray-700 mb-4">
+                        Prima visita, prevenzione carie e educazione all'igiene per i più piccoli in un ambiente accogliente.
+                    </p>
+                    <a href="servizi.html#pediatrica" class="text-blue-medium font-medium inline-flex items-center">
+                        Scopri di più
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-blue-light flex items-center justify-center mb-6">
+                        <i data-lucide="git-branch" class="text-blue-navy w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-3">Ortodonzia</h3>
+                    <p class="text-gray-700 mb-4">
+                        Apparecchi ortodontici, ortodonzia intercettiva e allineatori trasparenti per bambini e adulti.
+                    </p>
+                    <a href="servizi.html#ortodonzia" class="text-blue-medium font-medium inline-flex items-center">
+                        Scopri di più
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-blue-light flex items-center justify-center mb-6">
+                        <i data-lucide="circle-ellipsis" class="text-blue-navy w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-3">Gnatologia</h3>
+                    <p class="text-gray-700 mb-4">
+                        Diagnosi occlusale, trattamenti ATM e prevenzione dolori mandibolari e posturali.
+                    </p>
+                    <a href="servizi.html#gnatologia" class="text-blue-medium font-medium inline-flex items-center">
+                        Scopri di più
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-blue-light flex items-center justify-center mb-6">
+                        <i data-lucide="user-check" class="text-blue-navy w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-3">Pazienti special needs</h3>
+                    <p class="text-gray-700 mb-4">
+                        Visite personalizzate, ambiente accogliente e approccio inclusivo per pazienti con esigenze specifiche.
+                    </p>
+                    <a href="servizi.html#special-needs" class="text-blue-medium font-medium inline-flex items-center">
+                        Scopri di più
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-blue-light flex items-center justify-center mb-6">
+                        <i data-lucide="heart-handshake" class="text-blue-navy w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-navy mb-3">Odontoiatria in gravidanza</h3>
+                    <p class="text-gray-700 mb-4">
+                        Trattamenti sicuri, prevenzione gengiviti e controlli delicati per le future mamme.
+                    </p>
+                    <a href="servizi.html#gravidanza" class="text-blue-medium font-medium inline-flex items-center">
+                        Scopri di più
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="servizi.html" class="inline-flex items-center text-blue-medium font-bold text-lg">
+                    Vedi tutti i servizi
+                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Professionalism -->
+    <section class="section-padding">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-navy mb-6">Fiducia e professionalità</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i data-lucide="shield" class="text-blue-medium w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-blue-dark mb-2">Protocolli di igiene rigorosi</h3>
+                                <p class="text-gray-700">Seguiamo procedure di sterilizzazione avanzate per garantire la massima sicurezza in ogni fase del trattamento.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i data-lucide="zap" class="text-blue-medium w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-blue-dark mb-2">Tecnologie avanzate</h3>
+                                <p class="text-gray-700">Utilizziamo le ultime innovazioni in campo odontoiatrico per trattamenti più precisi, rapidi e confortevoli.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i data-lucide="smile" class="text-blue-medium w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-blue-dark mb-2">Comfort del paziente</h3>
+                                <p class="text-gray-700">Creiamo un ambiente rilassante e accogliente, con attenzione alla riduzione dell'ansia e dello stress durante le visite.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-light bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i data-lucide="clipboard-check" class="text-blue-medium w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-blue-dark mb-2">Trattamenti personalizzati</h3>
+                                <p class="text-gray-700">Ogni piano di cura è studiato sulle specifiche esigenze del paziente, con obiettivi chiari e risultati prevedibili.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="http://static.photos/medical/1024x576/2" alt="Ambiente moderno dello studio odontoiatrico" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-navy mb-4">Cosa dicono i nostri pazienti</h2>
+                <p class="text-blue-medium text-xl max-w-3xl mx-auto">
+                    La soddisfazione dei nostri pazienti è la nostra migliore recensione
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center mr-4">
+                            <span class="text-blue-navy font-bold">MC</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-navy">Maria C.</h4>
+                            <div class="flex text-blue-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "La Dott.ssa Capasso ha curato mio figlio di 8 anni con una pazienza e dolcezza incredibili. Ora non ha più paura del dentista!"
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center mr-4">
+                            <span class="text-blue-navy font-bold">LG</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-navy">Luigi G.</h4>
+                            <div class="flex text-blue-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Dopo anni di dolori alla mandibola, finalmente ho trovato una soluzione con la terapia gnatologica. Professionale e risolutiva."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center mr-4">
+                            <span class="text-blue-navy font-bold">SA</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-navy">Sara A.</h4>
+                            <div class="flex text-blue-medium">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Ambiente moderno e rilassante, personale gentilissimo. Finalmente un dentista che ti spiega tutto con chiarezza e senza fretta."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-blue-medium to-blue-dark rounded-2xl p-8 md:p-12 text-white">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-2/3 mb-8 lg:mb-0 lg:pr-8">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Pronto per il tuo sorriso perfetto?</h2>
+                        <p class="text-blue-light text-lg mb-6">
+                            Prenota una visita di controllo o richiedi informazioni sui nostri trattamenti.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                            <div class="flex items-center">
+                                <i data-lucide="phone" class="w-6 h-6 mr-3"></i>
+                                <div>
+                                    <p class="text-blue-light">Chiamaci al</p>
+                                    <p class="text-2xl font-bold">+39 06 1234 5678</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="clock" class="w-6 h-6 mr-3"></i>
+                                <div>
+                                    <p class="text-blue-light">Orari di apertura</p>
+                                    <p class="font-bold">Lun-Ven: 9:00-19:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <a href="contatti.html#prenota" class="bg-white text-blue-medium px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition inline-block text-center w-full">
+                            Prenota una visita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-navy text-white py-12">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-3">
+                            <i data-lucide="tooth" class="text-blue-navy"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Studio Odontoiatrico</h3>
+                            <p class="text-blue-light text-sm">Dott.ssa Francesca Capasso</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-light mb-6">
+                        Cura, prevenzione e benessere per la salute del tuo sorriso.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Link rapidi</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-blue-light hover:text-white transition">Home</a></li>
+                        <li><a href="studio.html" class="text-blue-light hover:text-white transition">Lo Studio</a></li>
+                        <li><a href="servizi.html" class="text-blue-light hover:text-white transition">Servizi</a></li>
+                        <li><a href="tecnologie.html" class="text-blue-light hover:text-white transition">Tecnologie</a></li>
+                        <li><a href="contatti.html" class="text-blue-light hover:text-white transition">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contatti</h4>
+                    <ul class="space-y-3 text-blue-light">
+                        <li class="flex items-center">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-3"></i>
+                            Via Roma, 123 - 00100 Roma
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-4 h-4 mr-3"></i>
+                            +39 06 1234 5678
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-4 h-4 mr-3"></i>
+                            info@studiocapasso.it
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Orari di apertura</h4>
+                    <ul class="space-y-3 text-blue-light">
+                        <li class="flex justify-between">
+                            <span>Lunedì - Venerdì</span>
+                            <span class="font-medium">9:00 - 19:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabato</span>
+                            <span class="font-medium">9:00 - 13:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Domenica</span>
+                            <span class="font-medium">Chiuso</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-dark mt-12 pt-8 text-center text-blue-light">
+                <p>&copy; 2023 Dott.ssa Francesca Capasso – Studio Odontoiatrico. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+                lucide.createIcons();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                if (href !== '#' && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Sticky navigation background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
