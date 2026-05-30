@@ -49,26 +49,54 @@
     </style>
 </head>
 <body class="min-h-screen bg-white text-gray-800 font-sans">
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <img src="https://picsum.photos/60?random=101" alt="Dental Studio Logo" class="h-12 w-12 rounded-full">
-                    <span class="ml-3 text-xl font-bold text-primary-blue">Dental Studio</span>
+      <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center space-x-2">
+                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-600"></i>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold text-navy-800 leading-tight">Studio Odontoiatrico</span>
+                            <span class="text-sm text-medical-600 font-medium">Dott.ssa Francesca Capasso</span>
+                        </div>
+                    </a>
                 </div>
-                <ul id="nav-menu" class="flex gap-8"></ul>
-                <button id="mobile-menu-btn" class="md:hidden text-primary-blue">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 bg-white border rounded-lg p-4">
-                <ul id="mobile-nav-menu"></ul>
-            </div>
-        </nav>
-    </header>
 
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Home</a>
+                    <a href="#studio" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Lo Studio</a>
+                    <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
+                    <a href="#tecnologie" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Tecnologie</a>
+                    <a href="#contatti" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Contatti</a>
+                    <a href="#contatti" class="bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30">
+                        Prenota una visita
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-medical-600 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-medical-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Home</a>
+                <a href="#studio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Lo Studio</a>
+                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Servizi</a>
+                <a href="#tecnologie" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Tecnologie</a>
+                <a href="#contatti" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Contatti</a>
+                <a href="#contatti" class="block mt-4 text-center bg-medical-600 text-white px-6 py-3 rounded-full font-medium">Prenota una visita</a>
+            </div>
+        </div>
+    </nav>
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-light-blue to-white py-section">
         <div class="container mx-auto px-4">
