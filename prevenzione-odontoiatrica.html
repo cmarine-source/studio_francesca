@@ -1,84 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prevenzione odontoiatrica</title>
+
     <meta name="description" content="Premium dental prevention services for long-term oral health. Our preventative dentistry includes regular checkups, professional cleanings, fluoride treatments, and early diagnosis.">
     <meta name="keywords" content="prevention odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
+
+    <!-- Tailwind (UNA SOLA VOLTA) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                navy: {
-                    900: '#0c1e3d',
-                    800: '#1e3a8a',
-                    700: '#1e40af',
-                },
-                medical: {
-                    50: '#eff6ff',
-                    100: '#dbeafe',
-                    200: '#bfdbfe',
-                    300: '#93c5fd',
-                    400: '#60a5fa',
-                    500: '#3b82f6',
-                    600: '#2563eb',
-                    700: '#1d4ed8',
-                    800: '#1e40af',
-                    900: '#1e3a8a',
-                },
 
-                // 🔵 TUO VECCHIO SISTEMA (LO TENIAMO)
-                "primary-blue": "#2563EB",
-                "light-blue": "#DBEAFE",
-                "accent-blue": "#60A5FA",
-                "secondary-gray": "#F3F4F6"
-            },
-
-            spacing: {
-                section: "80px"
-            },
-
-            animation: {
-                "fade-in": "fadeIn 0.8s ease-out",
-                "slide-up": "slideUp 0.6s ease-out"
-            },
-
-            fontFamily: {
-                sans: ['Inter', 'sans-serif'],
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0c1e3d',
+                            800: '#1e3a8a',
+                            700: '#1e40af',
+                        },
+                        medical: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        "primary-blue": "#2563EB",
+                        "light-blue": "#DBEAFE",
+                        "accent-blue": "#60A5FA",
+                        "secondary-gray": "#F3F4F6"
+                    },
+                    spacing: {
+                        section: "80px"
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.8s ease-out",
+                        "slide-up": "slideUp 0.6s ease-out"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
             }
         }
-    }
-}
-</script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
+    </script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         @keyframes slideUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
         .hover-lift {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .hover-lift:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1);
         }
     </style>
 </head>
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+<body class="bg-white text-gray-800 font-sans">
+
 <script>
   lucide.createIcons();
 </script>
@@ -173,7 +176,7 @@ tailwind.config = {
         </div>
     </section>
     <!-- FAQ -->
-    <section class="py-section">
+    <section class="py-section bg-secondary-gray">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-8">Domande Frequenti</h2>
             <div id="faq-list" class="space-y-6"></div>
