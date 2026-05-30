@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prevenzione odontoiatrica</title>
+    <title>Prevenzione Odontoiatrica - Studio Dott.ssa Francesca Capasso</title>
 
-    <meta name="description" content="Premium dental prevention services for long-term oral health. Our preventative dentistry includes regular checkups, professional cleanings, fluoride treatments, and early diagnosis.">
-    <meta name="keywords" content="prevention odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
+    <meta name="description" content="Servizi premium di prevenzione dentale per una salute orale a lungo termine. Include check-up regolari, pulizie professionali e diagnosi precoce.">
+    <meta name="keywords" content="prevenzione odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
 
-    <!-- Tailwind (UNA SOLA VOLTA) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -20,19 +19,12 @@
                         navy: {
                             900: '#0c1e3d',
                             800: '#1e3a8a',
-                            700: '#1e40af',
                         },
                         medical: {
                             50: '#eff6ff',
                             100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
                             600: '#2563eb',
                             700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
                         },
                         "primary-blue": "#2563EB",
                         "light-blue": "#DBEAFE",
@@ -45,9 +37,6 @@
                     animation: {
                         "fade-in": "fadeIn 0.8s ease-out",
                         "slide-up": "slideUp 0.6s ease-out"
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -59,37 +48,18 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1);
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1); }
     </style>
 </head>
 
-
-<script>
-  lucide.createIcons();
-</script>
 <body class="min-h-screen bg-white text-gray-800 font-sans">
-      <!-- Navigation -->
+    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#home" class="flex items-center space-x-2">
                         <i data-lucide="sparkles" class="h-8 w-8 text-medical-600"></i>
@@ -100,19 +70,16 @@
                     </a>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Home</a>
-                    <a href="#studio" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Lo Studio</a>
+                    <a href="#prevenzione" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Prevenzione</a>
                     <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
-                    <a href="#tecnologie" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Tecnologie</a>
-                    <a href="index.html#contatti" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Contatti</a>
-                    <a href="#contatti" class="bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30">
+                    <a href="#faq" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">FAQ</a>
+                    <button onclick="openBookingModal()" class="bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30">
                         Prenota una visita
-                    </a>
+                    </button>
                 </div>
 
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-medical-600 focus:outline-none">
                         <i data-lucide="menu" class="h-6 w-6"></i>
@@ -121,46 +88,45 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-medical-100 absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Home</a>
-                <a href="#studio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Lo Studio</a>
-                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Servizi</a>
-                <a href="#tecnologie" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Tecnologie</a>
-                <a href="#contatti" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Contatti</a>
-                <a href="#contatti" class="block mt-4 text-center bg-medical-600 text-white px-6 py-3 rounded-full font-medium">Prenota una visita</a>
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Home</a>
+                <a href="#prevenzione" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Prevenzione</a>
+                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Servizi</a>
+                <button onclick="openBookingModal()" class="w-full mt-4 text-center bg-medical-600 text-white px-6 py-3 rounded-full font-medium">Prenota una visita</button>
             </div>
         </div>
     </nav>
+
     <!-- Hero Section -->
-       </section>
-     <section class="bg-gradient-to-r from-light-blue to-white py-section">
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-r from-light-blue to-white">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="animate-fade-in">
                     <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">Prevenzione Odontoiatrica</h1>
                     <p class="text-xl text-gray-600 mb-8">Il Sorriso di Domani si Costruisce Oggi</p>
+                    <button onclick="openBookingModal()" class="bg-primary-blue text-white px-8 py-3 rounded-full hover-lift shadow-lg">Scopri di più</button>
                 </div>
                 <div class="animate-slide-up">
-                    <img src="https://picsum.photos/600/400?random=102" alt="Happy patient with dentist" class="rounded-xl shadow-lg w-full">
+                    <img src="https://picsum.photos/600/400?random=102" alt="Dentista e paziente" class="rounded-xl shadow-lg w-full">
                 </div>
-            </div>
-        </div>
-
-    <!-- Introduction -->
-    <section class="py-section">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary-blue mb-6">Perchè è importante la prevenzione?</h2>
-            <div class="bg-secondary-gray rounded-xl p-8">
-                <p class="text-lg mb-4"> Perché i disturbi del cavo orale – come carie, gengiviti e parodontiti – nelle loro fasi iniziali sono subdoli e silenziosi: non fanno male.</p>
-                <p class="text-lg"> Investire oggi in piccoli gesti di prevenzione significa evitare terapie lunghe, complesse e dolorose in futuro. Prendersi cura del proprio sorriso regolarmente è l'atto d'amore più grande che puoi fare per la tua salute e, non da ultimo, per il tuo portafoglio.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Included -->
-    <section class="py-section bg-light-blue">
+    <!-- Introduction -->
+    <section id="prevenzione" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6">Perché è importante la prevenzione?</h2>
+            <div class="bg-secondary-gray rounded-xl p-8">
+                <p class="text-lg mb-4">Perché i disturbi del cavo orale – come carie, gengiviti e parodontiti – nelle loro fasi iniziali sono subdoli e silenziosi: non fanno male.</p>
+                <p class="text-lg">Investire oggi in piccoli gesti di prevenzione significa evitare terapie lunghe, complesse e dolorose in futuro. Prendersi cura del proprio sorriso regolarmente è l'atto d'amore più grande che puoi fare per la tua salute.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servizi" class="py-20 bg-light-blue">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-8">I nostri servizi di prevenzione</h2>
             <div id="services-grid" class="grid md:grid-cols-3 gap-8"></div>
@@ -168,30 +134,29 @@
     </section>
 
     <!-- Benefits -->
-    <section class="py-section">
+    <section class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary-blue mb-8">Benefici di una cura preventiva</2>
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Benefici di una cura preventiva</h2>
             <div id="benefits-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
         </div>
     </section>
+
     <!-- FAQ -->
-    <section class="py-section bg-secondary-gray">
+    <section id="faq" class="py-20 bg-secondary-gray">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-8">Domande Frequenti</h2>
             <div id="faq-list" class="space-y-6"></div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-section bg-primary-blue text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold mb-4">Inizia a proteggere la tua salute orale oggi stesso</h2>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">Prenota una visita preventiva dal dentista e investi nel tuo benessere a lungo termine con il nostro team professionale.</p>
-            <button onclick="window.location.href='index.html#contatti'" class="bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg">
-    Prenota il tuo appuntamento
-</button>
-            </div>
+    <!-- CTA -->
+    <section class="py-20 bg-primary-blue text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Inizia a proteggere la tua salute orale oggi stesso</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Prenota una visita preventiva e investi nel tuo benessere a lungo termine.</p>
+            <button onclick="openBookingModal()" class="bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg">
+                Prenota il tuo appuntamento
+            </button>
         </div>
     </section>
 
@@ -204,211 +169,128 @@
                         <i data-lucide="sparkles" class="h-8 w-8 text-medical-400"></i>
                         <div>
                             <h3 class="text-xl font-bold">Studio Odontoiatrico</h3>
-                            <p class="text-medical-400">Dott.ssa Francesca Capasso</p>
+                            <p class="text-blue-400">Dott.ssa Francesca Capasso</p>
                         </div>
                     </div>
-                    <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
-                        Cura, prevenzione e benessere per la salute del tuo sorriso. Professionalità, tecnologia e umanità al servizio della tua salute orale.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
-                        </a>
-                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
+                    <ul id="social-links" class="flex space-x-4"></ul>
                 </div>
-
                 <div>
                     <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-medical-400 transition-colors">Home</a></li>
-                        <li><a href="#studio" class="hover:text-medical-400 transition-colors">Lo Studio</a></li>
-                        <li><a href="#servizi" class="hover:text-medical-400 transition-colors">Servizi</a></li>
-                        <li><a href="#tecnologie" class="hover:text-medical-400 transition-colors">Tecnologie</a></li>
-                        <li><a href="#contatti" class="hover:text-medical-400 transition-colors">Contatti</a></li>
-                    </ul>
+                    <ul id="footer-links" class="space-y-2 text-gray-400"></ul>
                 </div>
-
                 <div>
                     <h4 class="font-bold text-lg mb-4">Contatti</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Via Genova 11</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="phone" class="w-4 h-4"></i>
-                            <span>+39 077 120 1401</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="mail" class="w-4 h-4"></i>
-                            <span>francescacapasso743@gmail.com</span>
-                        </li>
-                    </ul>
+                    <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
                 </div>
             </div>
-
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
-                    © 2026 Studio Odontoiatrico Dott.ssa Francesca Capasso. Tutti i diritti riservati.
-                </p>
-                <div class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
-                </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+                © 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.
             </div>
         </div>
     </footer>
 
     <!-- Booking Modal -->
-    <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-100 flex items-center justify-center">
-        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
-            <h3 class="text-2xl font-bold text-primary-blue mb-4">Inizia a proteggere la tua salute orale oggi stesso</h3>
-            <form id="booking-form">
-                <div class="space-y-4">
-                    <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg">
-                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg">
-                    <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg">
-                    <select class="w-full p-3 border rounded-lg">
-                        <option value="">Select Service</option>
-                        <option value="checkup">Regular Checkup</option>
-                        <option value="cleaning">Professional Cleaning</option>
-                        <option value="fluoride">Fluoride Treatment</option>
-                    </select>
-                </div>
-                <div class="mt-6 flex justify-end gap-4">
-                    <button type="button" id="close-modal-btn" class="px-4 py-2 border rounded-lg">Cancel</button>
-                    <button type="submit" class="bg-primary-blue text-white px4 py-2 rounded-lg">Submit Booking</button>
-                </div>
+    <div id="booking-modal" class="fixed inset-0 bg-black/50 hidden z-[100] flex items-center justify-center">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4 relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i data-lucide="x"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-primary-blue mb-4">Prenota la tua Visita</h3>
+            <form id="booking-form" class="space-y-4">
+                <input type="text" placeholder="Nome Completo" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
+                <input type="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
+                <input type="tel" placeholder="Telefono" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
+                <select class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
+                    <option value="checkup">Controllo Regolare</option>
+                    <option value="cleaning">Pulizia Professionale</option>
+                    <option value="fluoride">Fluoroprofilassi</option>
+                </select>
+                <button type="submit" class="w-full bg-primary-blue text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">Invia Richiesta</button>
             </form>
         </div>
     </div>
 
     <script>
-        // Data layer
-        const navigationItems = [
-            { "label": "Home", "href": "#home" },
-            { "label": "Prevention", "href": "#prevention" },
-            { "label": "Services", "href": "#services" },
-            { "label": "About", "href": "#about" },
-            { "label": "Contact", "href": "#contact" }
-        ];
+        // Inizializzazione icone
+        lucide.createIcons();
 
+        // Dati
         const services = [
-            { "title": "Controlli regolari", "description": "Visite dentistiche complete per monitorare la salute orale e individuare i primi segni di problemi.", "icon": "fas fa-calendar-check" },
-            { "title": "Pulizie professionali", "description": "Procedure di pulizia profonda che eliminano placca e tartaro per gengive più sane.", "icon": "fas fa-tooth" },
-            { "title": "Fluoroprofilassi", "description": "Applicazioni protettive di fluoro per rafforzare i denti e prevenire le carie.", "icon": "fas fa-shield-alt" }
+            { title: "Controlli regolari", description: "Visite complete per monitorare la salute orale e individuare segni precoci.", icon: "fas fa-calendar-check" },
+            { title: "Pulizie professionali", description: "Eliminazione profonda di placca e tartaro per gengive sane.", icon: "fas fa-tooth" },
+            { title: "Fluoroprofilassi", description: "Trattamenti al fluoro per rafforzare lo smalto e prevenire le carie.", icon: "fas fa-shield-alt" }
         ];
 
         const benefits = [
-            { "title": "Prevenzione della carie", "description": "Riduci il rischio di carie attraverso cure proattive e un'igiene.", "icon": "fas fa-ban" },
-            { "title": "Salute gengivale", "description": "Prevenire le malattie parodontali con pulizie e controlli regolari.", "icon": "fas fa-heart" },
-            { "title": "Diagnosi precoce", "description": "Individua i problemi prima che diventino seri e richiedano trattamenti complessi.", "icon": "fas fa-search" },
-            { "title": "Risparmi sui costi", "description": "Evita procedure rigenerative costose mantenendo routine preventive.", "icon": "fas fa-piggy-bank" }
+            { title: "Prevenzione Carie", description: "Riduci drasticamente il rischio di lesioni cariose.", icon: "fas fa-ban" },
+            { title: "Salute Gengivale", description: "Evita infiammazioni e parodontiti.", icon: "fas fa-heart" },
+            { title: "Diagnosi Precoce", description: "Risolvi i problemi quando sono ancora piccoli.", icon: "fas fa-search" },
+            { title: "Risparmio", description: "Meno interventi complessi significa meno costi futuri.", icon: "fas fa-piggy-bank" }
         ];
 
         const faqItems = [
-            { "question": "Con quale frequenza dovrei fare una visita preventiva dal dentista?", "answer": "Raccomandiamo visite semestrali per la maggior parte dei pazienti, ma il dentista potrebbe suggerire un programma personalizzato in base alla tua salute orale." },
-            { "question": "La odontoiatria preventiva è coperta dall'assicurazione?", "answer": "La maggior parte dei piani assicurativi dentali copre i servizi preventivi come controlli e pulizie. Possiamo aiutarti a verificare la tua copertura." },
-            { "question": "Qual è la differenza tra una pulizia normale e una pulizia profonda?", "answer": "La pulizia regolare si concentra sulla placca superficiale, mentre la pulizia profonda elimina il tartaro sotto la linea gengivale—spesso necessario per la salute parodontale." },
-            { "question": "I bambini possono beneficiare della odontoiatria preventiva?", "answer": "Assolutamente. La prevenzione precoce stabilisce buone abitudini e monitora lo sviluppo, prevenendo problemi futuri." }
+            { question: "Ogni quanto fare un controllo?", answer: "Consigliamo una visita ogni 6 mesi per mantenere una salute ottimale." },
+            { question: "La pulizia fa male?", answer: "No, è una procedura indolore. In caso di sensibilità, adottiamo tecniche delicate." }
         ];
 
         const footerLinks = [
-            { "label": "Privacy Policy", "href": "#privacy" },
-            { "label": "Terms of Service", "href": "#terms" },
-            { "label": "Careers", "href": "#careers" },
-            { "label": "Blog", "href": "#blog" }
+            { label: "Privacy Policy", href: "#" },
+            { label: "Cookie Policy", href: "#" },
+            { label: "Termini", href: "#" }
         ];
 
-        const socialLinks = [
-            { "platform": "Facebook", "icon": "fab fa-facebook", "href": "#facebook" },
-            { "platform": "Instagram", "icon": "fab fa-instagram", "href": "#instagram" },
-            { "platform": "Twitter", "icon": "fab fa-twitter", "href": "#twitter" },
-            { "platform": "LinkedIn", "icon": "fab fa-linkedin", "href": "#linkedin" }
-        ];
+        // Rendering
+        document.getElementById("services-grid").innerHTML = services.map(s => `
+            <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
+                <i class="${s.icon} text-primary-blue text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">${s.title}</h3>
+                <p class="text-gray-600">${s.description}</p>
+            </div>`).join("");
 
-        // Reusable render functions
-        function renderNavItems(items) {
-            return items.map(item => "<li><a href=\"" + item.href + "\" class=\"text-gray-700 hover:text-primary-blue font-medium\">" + item.label + "</a></li>").join("");
-        }
+        document.getElementById("benefits-grid").innerHTML = benefits.map(b => `
+            <div class="bg-white rounded-lg p-5 border border-light-blue hover-lift text-center">
+                <i class="${b.icon} text-accent-blue text-2xl mb-3"></i>
+                <h3 class="font-semibold mb-2">${b.title}</h3>
+                <p class="text-gray-600 text-sm">${b.description}</p>
+            </div>`).join("");
 
-        function renderServices(items) {
-            return items.map(item => "<div class=\"bg-white rounded-xl p-6 shadow-md hover-lift\"><div class=\"text-primary-blue mb-4\"><i class=\"" + item.icon + " text-3xl\"></i></div><h3 class=\"text-xl font-semibold mb-2\">" + item.title + "</h3><p class=\"text-gray-600\">" + item.description + "</p></div>").join("");
-        }
+        document.getElementById("faq-list").innerHTML = faqItems.map(f => `
+            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                <h3 class="font-semibold text-lg mb-2 text-primary-blue">${f.question}</h3>
+                <p class="text-gray-600">${f.answer}</p>
+            </div>`).join("");
 
-        function renderBenefits(items) {
-            return items.map(item => "<div class=\"bg-white rounded-lg p-5 border border-light-blue hover-lift\"><div class=\"text-accent-blue mb-3\"><i class=\"" + item.icon + " text-2xl\"></i></div><h3 class=\"font-semibold mb-2\">" + item.title + "</h3><p class=\"text-gray-600 text-sm\">" + item.description + "</p></div>").join("");
-        }
+        document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
+            <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
 
-        function renderFAQ(items) {
-            return items.map(item => "<div class=\"border border-gray-200 rounded-lg p-5\"><h3 class=\"font-semibold text-lg mb-2\">" + item.question + "</h3><p class=\"text-gray-600\">" + item.answer + "</p></div>").join("");
-        }
-
-        function renderFooterLinks(items) {
-            return items.map(item => "<li class=\"mb-2\"><a href=\"" + item.href + "\" class=\"text-gray-400 hover:text-white\">" + item.label + "</a></li>").join("");
-        }
-
-        function renderSocialLinks(items) {
-            return items.map(item => "<li><a href=\"" + item.href + "\" class=\"text-gray-400 hover:text-white text-2xl\"><i class=\"" + item.icon + "\"></i></a></li>").join("");
-        }
-
-        // DOM rendering
-        document.getElementById("services-grid").innerHTML = renderServices(services);
-        document.getElementById("benefits-grid").innerHTML = renderBenefits(benefits);
-        document.getElementById("faq-list").innerHTML = renderFAQ(faqItems);
-        document.getElementById("footer-links").innerHTML = renderFooterLinks(footerLinks);
-        document.getElementById("social-links").innerHTML = renderSocialLinks(socialLinks);
-
-        // Event handlers
-        document.getElementById("mobile-menu-btn").addEventListener("click", function() {
-            const menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
-        });
-
+        // Funzioni Modale
         function openBookingModal() {
             document.getElementById("booking-modal").classList.remove("hidden");
+            document.body.style.overflow = 'hidden';
         }
 
         function closeBookingModal() {
             document.getElementById("booking-modal").classList.add("hidden");
+            document.body.style.overflow = 'auto';
         }
 
-        document.getElementById("book-visit-btn").addEventListener("click", openBookingModal);
-        document.getElementById("final-book-btn").addEventListener("click", openBookingModal);
-        document.getElementById("close-modal-btn").addEventListener("click", closeBookingModal);
-
-        // Close modal on background click
-        document.getElementById("booking-modal").addEventListener("click", function(event) {
-            if (event.target === this) {
-                closeBookingModal();
-            }
+        // Eventi
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
         });
 
-        // Form submission
-        document.getElementById("booking-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Thank you! Your booking request has been submitted. We'll contact you shortly.");
+        document.getElementById("booking-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Grazie! La richiesta è stata inviata correttamente.");
             closeBookingModal();
         });
 
-        // Smooth scrolling for navigation links
-        document.addEventListener("click", function(event) {
-            const link = event.target.closest("a[href^='#']");
-            if (link) {
-                event.preventDefault();
-                const targetId = link.getAttribute("href").substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-            }
-        });
+        // Chiudi modale cliccando fuori
+        window.onclick = function(event) {
+            const modal = document.getElementById("booking-modal");
+            if (event.target == modal) closeBookingModal();
+        }
     </script>
 </body>
 </html>
