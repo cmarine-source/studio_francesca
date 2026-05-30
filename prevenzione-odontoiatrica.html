@@ -10,7 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
 <script>
 tailwind.config = {
     theme: {
@@ -32,13 +31,31 @@ tailwind.config = {
                     700: '#1d4ed8',
                     800: '#1e40af',
                     900: '#1e3a8a',
-                }
+                },
+
+                // 🔵 TUO VECCHIO SISTEMA (LO TENIAMO)
+                "primary-blue": "#2563EB",
+                "light-blue": "#DBEAFE",
+                "accent-blue": "#60A5FA",
+                "secondary-gray": "#F3F4F6"
+            },
+
+            spacing: {
+                section: "80px"
+            },
+
+            animation: {
+                "fade-in": "fadeIn 0.8s ease-out",
+                "slide-up": "slideUp 0.6s ease-out"
+            },
+
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
             }
         }
     }
 }
 </script>
-
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
   lucide.createIcons();
