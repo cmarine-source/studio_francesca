@@ -1,204 +1,73 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html lang="en">
 <head>
-
     <base target="_self">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Studio Odontoiatrico Dott.ssa Francesca Capasso | Dentista Gaeta</title>
-
-    <meta name="description" content="Studio Odontoiatrico Dott.ssa Francesca Capasso - Cura, prevenzione e benessere per la salute del tuo sorriso. Specializzati in odontoiatria pediatrica, ortodonzia, gnatologia e prevenzione odontoiatrica a Gaeta.">
-
-    <meta name="keywords" content="studio odontoiatrico, dentista, ortodonzia, odontoiatria pediatrica, gnatologia, prevenzione odontoiatrica, pulizia dentale professionale, salute orale, Francesca Capasso">
-
-    <!-- Tailwind -->
+    <title>Dental Prevention & Oral Health Care | Professional Dental Studio</title>
+    <meta name="description" content="Premium dental prevention services for long-term oral health. Our preventative dentistry includes regular checkups, professional cleanings, fluoride treatments, and early diagnosis.">
+    <meta name="keywords" content="prevention odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script>
-
         tailwind.config = {
-
             theme: {
-
                 extend: {
-
                     colors: {
-
-                        navy: {
-                            900: '#0c1e3d',
-                            800: '#1e3a8a',
-                            700: '#1e40af'
-                        },
-
-                        medical: {
-                            50:'#eff6ff',
-                            100:'#dbeafe',
-                            200:'#bfdbfe',
-                            300:'#93c5fd',
-                            400:'#60a5fa',
-                            500:'#3b82f6',
-                            600:'#2563eb',
-                            700:'#1d4ed8',
-                            800:'#1e40af',
-                            900:'#1e3a8a'
-                        },
-
-                        "primary-blue":"#2563EB",
-                        "light-blue":"#DBEAFE",
-                        "accent-blue":"#60A5FA",
-                        "secondary-gray":"#F3F4F6"
-
+                        "primary-blue": "#2563EB",
+                        "light-blue": "#DBEAFE",
+                        "accent-blue": "#60A5FA",
+                        "secondary-gray": "#F3F4F6"
                     },
-
                     spacing: {
-
-                        section:"80px"
-
+                        "section": "80px"
                     },
-
                     animation: {
-
-                        "fade-in":"fadeIn 0.8s ease-out",
-                        "slide-up":"slideUp 0.6s ease-out"
-
-                    },
-
-                    fontFamily: {
-
-                        sans:['Inter','sans-serif']
-
+                        "fade-in": "fadeIn 0.8s ease-out",
+                        "slide-up": "slideUp 0.6s ease-out"
                     }
-
                 }
-
             }
-
         }
-
     </script>
-
     <style>
-
         @keyframes fadeIn {
-
-            from {opacity:0;}
-
-            to {opacity:1;}
-
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
         @keyframes slideUp {
-
-            from {
-
-                transform:translateY(20px);
-
-                opacity:0;
-
-            }
-
-            to {
-
-                transform:translateY(0);
-
-                opacity:1;
-
-            }
-
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-
-        .hover-lift{
-
-            transition:
-            transform .3s ease,
-            box-shadow .3s ease;
-
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .hover-lift:hover{
-
-            transform:translateY(-4px);
-
-            box-shadow:
-            0 12px 20px rgba(
-            37,
-            99,
-            235,
-            .1);
-
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1);
         }
-
     </style>
-
 </head>
 <body class="min-h-screen bg-white text-gray-800 font-sans">
-  
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#home" class="flex items-center space-x-2">
-                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-600"></i>
-                        <div class="flex flex-col">
-                            <span class="text-lg font-bold text-navy-800 leading-tight">Studio Odontoiatrico</span>
-                            <span class="text-sm text-medical-600 font-medium">Dott.ssa Francesca Capasso</span>
-                        </div>
-                    </a>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="https://picsum.photos/60?random=101" alt="Dental Studio Logo" class="h-12 w-12 rounded-full">
+                    <span class="ml-3 text-xl font-bold text-primary-blue">Dental Studio</span>
                 </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Home</a>
-                    <a href="#studio" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Lo Studio</a>
-                    <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
-                    <a href="#tecnologie" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Tecnologie</a>
-                    <a href="#contatti" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Contatti</a>
-                    <a href="#contatti" class="bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30">
-                        Prenota una visita
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-medical-600 focus:outline-none">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
+                <ul id="nav-menu" class="flex gap-8"></ul>
+                <button id="mobile-menu-btn" class="md:hidden text-primary-blue">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-        </div>
-
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-medical-100 absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Home</a>
-                <a href="#studio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Lo Studio</a>
-                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Servizi</a>
-                <a href="#tecnologie" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Tecnologie</a>
-                <a href="#contatti" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 hover:bg-medical-50 rounded-md">Contatti</a>
-                <a href="#contatti" class="block mt-4 text-center bg-medical-600 text-white px-6 py-3 rounded-full font-medium">Prenota una visita</a>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 bg-white border rounded-lg p-4">
+                <ul id="mobile-nav-menu"></ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-light-blue to-white py-section">
@@ -270,75 +139,33 @@
         </div>
     </section>
 
-   <!-- Footer -->
-    <footer class="bg-navy-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-400"></i>
-                        <div>
-                            <h3 class="text-xl font-bold">Studio Odontoiatrico</h3>
-                            <p class="text-medical-400">Dott.ssa Francesca Capasso</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
-                        Cura, prevenzione e benessere per la salute del tuo sorriso. Professionalità, tecnologia e umanità al servizio della tua salute orale.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                </div>
-
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-section">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-medical-400 transition-colors">Home</a></li>
-                        <li><a href="#studio" class="hover:text-medical-400 transition-colors">Lo Studio</a></li>
-                        <li><a href="#servizi" class="hover:text-medical-400 transition-colors">Servizi</a></li>
-                        <li><a href="#tecnologie" class="hover:text-medical-400 transition-colors">Tecnologie</a></li>
-                        <li><a href="#contatti" class="hover:text-medical-400 transition-colors">Contatti</a></li>
-                    </ul>
+                    <h3 class="text-xl font-bold mb-4">Dental Studio</h3>
+                    <p class="text-gray-400">Premium dental prevention and oral health care.</p>
                 </div>
-
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Contatti</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i>
-                            <span>Via Genova 11</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="phone" class="w-4 h-4"></i>
-                            <span>+39 077 120 1401</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="mail" class="w-4 h-4"></i>
-                            <span>francescacapasso743@gmail.com</span>
-                        </li>
-                    </ul>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul id="footer-links"></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">123 Health Street<br>Medical District<br>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <ul id="social-links" class="flex gap-4"></ul>
                 </div>
             </div>
-
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
-                    © 2026 Studio Odontoiatrico Dott.ssa Francesca Capasso. Tutti i diritti riservati.
-                </p>
-                <div class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
-                </div>
+            <div class="mt-12 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Dental Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <!-- Booking Modal -->
     <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-100 flex items-center justify-center">
         <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
