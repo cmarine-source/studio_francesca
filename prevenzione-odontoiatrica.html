@@ -318,6 +318,11 @@ tailwind.config = {
         }
 
         // DOM rendering
+        const navMenu = document.getElementById("nav-menu");
+if (navMenu) navMenu.innerHTML = renderNavItems(navigationItems);
+
+const mobileNavMenu = document.getElementById("mobile-nav-menu");
+if (mobileNavMenu) mobileNavMenu.innerHTML = renderNavItems(navigationItems);
         document.getElementById("services-grid").innerHTML = renderServices(services);
         document.getElementById("benefits-grid").innerHTML = renderBenefits(benefits);
         document.getElementById("process-steps").innerHTML = renderProcessSteps(processSteps);
