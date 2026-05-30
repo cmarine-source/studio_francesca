@@ -1,1 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevenzione Odontoiatrica - Studio Dott.ssa Francesca Capasso</title>
 
+    <meta name="description" content="Servizi premium di prevenzione dentale per una salute orale a lungo termine. Include check-up regolari, pulizie professionali e diagnosi precoce.">
+    <meta name="keywords" content="prevenzione odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0c1e3d',
+                            800: '#1e3a8a',
+                        },
+                        medical: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        "primary-blue": "#2563EB",
+                        "light-blue": "#DBEAFE",
+                        "accent-blue": "#60A5FA",
+                        "secondary-gray": "#F3F4F6"
+                    },
+                    spacing: {
+                        section: "80px"
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.8s ease-out",
+                        "slide-up": "slideUp 0.6s ease-out"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1); }
+    </style>
+</head>
+
+<body class="min-h-screen bg-white text-gray-800 font-sans">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-600"></i>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold text-navy-800 leading-tight">Studio Odontoiatrico</span>
+                            <span class="text-sm text-medical-600 font-medium">Dott.ssa Francesca Capasso</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Home</a>
+                    <a href="#prevenzione" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Prevenzione</a>
+                    <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
+                    <a href="#faq" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">FAQ</a>
+                    <a href="index.html#contatti" class="inline-block bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30 text-center">
+                        Prenota una visita
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-medical-600 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-medical-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Home</a>
+                <a href="#prevenzione" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Prevenzione</a>
+                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Servizi</a>
+                <a href="index.html#contatti" class="block w-full mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
+                    Prenota una visita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-r from-light-blue to-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">Ortodonzia</h1>
+                    <p class="text-xl text-gray-600 mb-8">L'Armonia del Sorriso: Equilibrio tra Estetica e Funzione</p>
+                    <a href="index.html#contatti" class="inline-block bg-primary-blue text-white px-8 py-3 rounded-full hover-lift shadow-lg font-semibold transition-transform text-center">
+                        Scopri di più
+                    </a>
+                </div>
+                <div class="animate-slide-up">
+                    <img src="https://picsum.photos/600/400?random=102" alt="Dentista e paziente" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prevenzione" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6">Perché è importante la prevenzione?</h2>
+            <div class="bg-secondary-gray rounded-xl p-8">
+                <p class="text-lg mb-4">L'ortodonzia non serve solo a "raddrizzare i denti". Un corretto allineamento è fondamentale per una masticazione efficiente, una corretta fonazione e per facilitare l'igiene quotidiana, riducendo il rischio di carie e parodontite.</p>
+                <p class="text-lg">Intervenire tempestivamente, specialmente in età evolutiva, permette di guidare la crescita delle ossa mascellari, evitando interventi chirurgici o estrattivi più complessi in età adulta. Un sorriso armonioso migliora non solo la salute della bocca, ma anche l'autostima e la sicurezza di sé a ogni età.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servizi" class="py-20 bg-light-blue">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">I nostri servizi di prevenzione</h2>
+            <div id="services-grid" class="grid md:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Benefici di una cura preventiva</h2>
+            <div id="benefits-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-secondary-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Domande Frequenti</h2>
+            <div id="faq-list" class="space-y-6"></div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-primary-blue text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Inizia a proteggere la tua salute orale oggi stesso</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Prenota una visita preventiva e investi nel tuo benessere a lungo termine.</p>
+            <a href="index.html#contatti" class="inline-block bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg text-center shadow-md">
+                Prenota il tuo appuntamento
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-400"></i>
+                        <div>
+                            <h3 class="text-xl font-bold">Studio Odontoiatrico</h3>
+                            <p class="text-blue-400">Dott.ssa Francesca Capasso</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
+                    <ul id="social-links" class="flex space-x-4"></ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
+                    <ul id="footer-links" class="space-y-2 text-gray-400"></ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contatti</h4>
+                    <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+                © 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inizializzazione icone Lucide
+        lucide.createIcons();
+
+        // Controllo Menu Mobile aperto/chiuso
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        // Dati dell'applicazione
+       const services = [
+    { 
+        title: "Check-up Ortodontico Digitale", 
+        description: "Studio del caso con scansioni 3D e analisi cefalometrica per una diagnosi precisa e personalizzata.", 
+        icon: "fas fa-laptop-medical" 
+    },
+    { 
+        title: "Ortodonzia Intercettiva", 
+        description: "Interventi precoci nei bambini per correggere le basi ossee e guidare l'eruzione dei denti permanenti.", 
+        icon: "fas fa-child" 
+    },
+    { 
+        title: "Allineatori Invisibili", 
+        description: "Trattamenti estetici e rimovibili che permettono di allineare i denti in modo discreto e confortevole.", 
+        icon: "fas fa-certificate" 
+    }
+];
+
+      const benefits = [
+    { 
+        title: "Masticazione Ottimale", 
+        description: "Correggere il morso migliora la digestione e previene disturbi all'articolazione temporo-mandibolare.", 
+        icon: "fas fa-apple-alt" 
+    },
+    { 
+        title: "Igiene Facilitata", 
+        description: "Denti ben allineati sono più facili da pulire, riducendo drasticamente placca e tartaro.", 
+        icon: "fas fa-sparkles" 
+    },
+    { 
+        title: "Estetica del Volto", 
+        description: "Miglioriamo l'armonia del profilo e la luminosità del sorriso a ogni età.", 
+        icon: "fas fa-user-check" 
+    },
+    { 
+        title: "Stabilità nel Tempo", 
+        description: "Un trattamento ben pianificato garantisce risultati duraturi e una salute orale costante.", 
+        icon: "fas fa-infinity" 
+    }
+];
+      const faqItems = [
+    { 
+        question: "L'apparecchio è solo per bambini?", 
+        answer: "Assolutamente no. Grazie alle moderne tecniche invisibili, è possibile allineare il sorriso a qualsiasi età con il minimo impatto estetico." 
+    },
+    { 
+        question: "Quanto dura un trattamento?", 
+        answer: "La durata varia in base alla complessità del caso, ma mediamente oscilla tra i 12 e i 24 mesi con controlli regolari." 
+    }
+];
+
+        const footerLinks = [
+            { label: "Home", href: "index.html" },
+            { label: "Prevenzione", href: "#prevenzione" },
+            { label: "Servizi", href: "#servizi" },
+            { label: "FAQ", href: "#faq" }
+        ];
+
+        const socialLinks = [
+            { icon: "facebook", href: "#" },
+            { icon: "instagram", href: "#" },
+            { icon: "linkedin", href: "#" }
+        ];
+
+        // Rendering dinamico degli elementi della pagina
+        document.getElementById("services-grid").innerHTML = services.map(s => `
+            <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
+                <i class="${s.icon} text-primary-blue text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">${s.title}</h3>
+                <p class="text-gray-600">${s.description}</p>
+            </div>`).join("");
+
+        document.getElementById("benefits-grid").innerHTML = benefits.map(b => `
+            <div class="bg-white rounded-lg p-5 border border-light-blue hover-lift text-center">
+                <i class="${b.icon} text-accent-blue text-2xl mb-3"></i>
+                <h3 class="font-semibold mb-2">${b.title}</h3>
+                <p class="text-gray-600 text-sm">${b.description}</p>
+            </div>`).join("");
+
+        document.getElementById("faq-list").innerHTML = faqItems.map(f => `
+            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                <h3 class="font-semibold text-lg mb-2 text-primary-blue">${f.question}</h3>
+                <p class="text-gray-600">${f.answer}</p>
+            </div>`).join("");
+
+        document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
+            <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
+
+        document.getElementById("social-links").innerHTML = socialLinks.map(s => `
+            <li>
+                <a href="${s.href}" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
+                    <i data-lucide="${s.icon}" class="w-5 h-5"></i>
+                </a>
+            </li>`).join("");
+
+        // Rielabora le icone caricate dinamicamente per i social network
+        lucide.createIcons();
+    </script>
+</body>
+</html>
