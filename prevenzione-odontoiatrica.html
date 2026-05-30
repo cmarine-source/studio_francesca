@@ -8,7 +8,6 @@
     <meta name="description" content="Servizi premium di prevenzione dentale per una salute orale a lungo termine. Include check-up regolari, pulizie professionali e diagnosi precoce.">
     <meta name="keywords" content="prevenzione odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -43,7 +42,6 @@
         }
     </script>
 
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -56,7 +54,6 @@
 </head>
 
 <body class="min-h-screen bg-white text-gray-800 font-sans">
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -75,9 +72,9 @@
                     <a href="#prevenzione" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Prevenzione</a>
                     <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
                     <a href="#faq" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">FAQ</a>
-                    <button onclick="openBookingModal()" class="bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30">
+                    <a href="index.html#contatti" class="inline-block bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30 text-center">
                         Prenota una visita
-                    </button>
+                    </a>
                 </div>
 
                 <div class="md:hidden flex items-center">
@@ -93,23 +90,22 @@
                 <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Home</a>
                 <a href="#prevenzione" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Prevenzione</a>
                 <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Servizi</a>
-               <a href="index.html#contatti" class="block mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
-    Prenota una visita
-</a>
+                <a href="index.html#contatti" class="block w-full mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
+                    Prenota una visita
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-32 pb-20 bg-gradient-to-r from-light-blue to-white">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="animate-fade-in">
                     <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">Prevenzione Odontoiatrica</h1>
                     <p class="text-xl text-gray-600 mb-8">Il Sorriso di Domani si Costruisce Oggi</p>
-                <a href="index.html#contatti" class="block mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
-    Prenota una visita
-</a>
+                    <a href="index.html#contatti" class="inline-block bg-primary-blue text-white px-8 py-3 rounded-full hover-lift shadow-lg font-semibold transition-transform text-center">
+                        Scopri di più
+                    </a>
                 </div>
                 <div class="animate-slide-up">
                     <img src="https://picsum.photos/600/400?random=102" alt="Dentista e paziente" class="rounded-xl shadow-lg w-full">
@@ -118,7 +114,6 @@
         </div>
     </section>
 
-    <!-- Introduction -->
     <section id="prevenzione" class="py-20">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-6">Perché è importante la prevenzione?</h2>
@@ -129,7 +124,6 @@
         </div>
     </section>
 
-    <!-- Services -->
     <section id="servizi" class="py-20 bg-light-blue">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-8">I nostri servizi di prevenzione</h2>
@@ -137,7 +131,6 @@
         </div>
     </section>
 
-    <!-- Benefits -->
     <section class="py-20">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-8">Benefici di una cura preventiva</h2>
@@ -145,7 +138,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq" class="py-20 bg-secondary-gray">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-primary-blue mb-8">Domande Frequenti</h2>
@@ -153,18 +145,16 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="py-20 bg-primary-blue text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4">Inizia a proteggere la tua salute orale oggi stesso</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">Prenota una visita preventiva e investi nel tuo benessere a lungo termine.</p>
-           <a href="index.html#contatti" class="block mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
-    Prenota una visita
-</a>
+            <a href="index.html#contatti" class="inline-block bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg text-center shadow-md">
+                Prenota il tuo appuntamento
+            </a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-navy-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
@@ -194,32 +184,16 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
-    <div id="booking-modal" class="fixed inset-0 bg-black/50 hidden z-[100] flex items-center justify-center">
-        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4 relative">
-            <a href="index.html#contatti" class="block mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
-    Prenota una visita
-</a>
-            <h3 class="text-2xl font-bold text-primary-blue mb-4">Prenota la tua Visita</h3>
-            <form id="booking-form" class="space-y-4">
-                <input type="text" placeholder="Nome Completo" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
-                <input type="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
-                <input type="tel" placeholder="Telefono" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
-                <select class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-blue outline-none">
-                    <option value="checkup">Controllo Regolare</option>
-                    <option value="cleaning">Pulizia Professionale</option>
-                    <option value="fluoride">Fluoroprofilassi</option>
-                </select>
-                <button type="submit" class="w-full bg-primary-blue text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">Invia Richiesta</button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        // Inizializzazione icone
+        // Inizializzazione icone Lucide
         lucide.createIcons();
 
-        // Dati
+        // Controllo Menu Mobile aperto/chiuso
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        // Dati dell'applicazione
         const services = [
             { title: "Controlli regolari", description: "Visite complete per monitorare la salute orale e individuare segni precoci.", icon: "fas fa-calendar-check" },
             { title: "Pulizie professionali", description: "Eliminazione profonda di placca e tartaro per gengive sane.", icon: "fas fa-tooth" },
@@ -239,12 +213,19 @@
         ];
 
         const footerLinks = [
-            { label: "Privacy Policy", href: "#" },
-            { label: "Cookie Policy", href: "#" },
-            { label: "Termini", href: "#" }
+            { label: "Home", href: "#home" },
+            { label: "Prevenzione", href: "#prevenzione" },
+            { label: "Servizi", href: "#servizi" },
+            { label: "FAQ", href: "#faq" }
         ];
 
-        // Rendering
+        const socialLinks = [
+            { icon: "facebook", href: "#" },
+            { icon: "instagram", href: "#" },
+            { icon: "linkedin", href: "#" }
+        ];
+
+        // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
             <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
                 <i class="${s.icon} text-primary-blue text-3xl mb-4"></i>
@@ -268,33 +249,15 @@
         document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
             <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
 
-        // Funzioni Modale
-        function openBookingModal() {
-            document.getElementById("booking-modal").classList.remove("hidden");
-            document.body.style.overflow = 'hidden';
-        }
+        document.getElementById("social-links").innerHTML = socialLinks.map(s => `
+            <li>
+                <a href="${s.href}" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
+                    <i data-lucide="${s.icon}" class="w-5 h-5"></i>
+                </a>
+            </li>`).join("");
 
-        function closeBookingModal() {
-            document.getElementById("booking-modal").classList.add("hidden");
-            document.body.style.overflow = 'auto';
-        }
-
-        // Eventi
-        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-
-        document.getElementById("booking-form").addEventListener("submit", (e) => {
-            e.preventDefault();
-            alert("Grazie! La richiesta è stata inviata correttamente.");
-            closeBookingModal();
-        });
-
-        // Chiudi modale cliccando fuori
-        window.onclick = function(event) {
-            const modal = document.getElementById("booking-modal");
-            if (event.target == modal) closeBookingModal();
-        }
+        // Rielabora le icone caricate dinamicamente per i social network
+        lucide.createIcons();
     </script>
 </body>
 </html>
