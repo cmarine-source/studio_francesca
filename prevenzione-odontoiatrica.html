@@ -104,7 +104,7 @@ tailwind.config = {
                     <a href="#studio" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Lo Studio</a>
                     <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
                     <a href="#tecnologie" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Tecnologie</a>
-                    <a href="#contatti" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Contatti</a>
+                    <a href="index.html#contatti" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Contatti</a>
                     <a href="#contatti" class="bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30">
                         Prenota una visita
                     </a>
@@ -175,7 +175,7 @@ tailwind.config = {
     <!-- FAQ -->
     <section class="py-section">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary-blue mb-8">Frequently Asked Questions</h2>
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Domande Frequenti</h2>
             <div id="faq-list" class="space-y-6"></div>
         </div>
     </section>
@@ -184,9 +184,11 @@ tailwind.config = {
     <section class="py-section bg-primary-blue text-white">
         <div class="container mx-auto px-4">
             <div class="text-center">
-                <h2 class="text-3xl font-bold mb-4">Start Protecting Your Oral Health Today</h2>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">Book a preventive dental visit and invest in your long-term wellness with our professional care team.</p>
-                <button id="final-book-btn" class="bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg">Schedule Your Appointment</button>
+                <h2 class="text-3xl font-bold mb-4">Inizia a proteggere la tua salute orale oggi stesso</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Prenota una visita preventiva dal dentista e investi nel tuo benessere a lungo termine con il nostro team professionale.</p>
+            <button onclick="window.location.href='index.html#contatti'" class="bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg">
+    Prenota il tuo appuntamento
+</button>
             </div>
         </div>
     </section>
@@ -221,7 +223,7 @@ tailwind.config = {
     <!-- Booking Modal -->
     <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-100 flex items-center justify-center">
         <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
-            <h3 class="text-2xl font-bold text-primary-blue mb-4">Book Your Visit</h3>
+            <h3 class="text-2xl font-bold text-primary-blue mb-4">Inizia a proteggere la tua salute orale oggi stesso</h3>
             <form id="booking-form">
                 <div class="space-y-4">
                     <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg">
@@ -266,10 +268,10 @@ tailwind.config = {
         ];
 
         const faqItems = [
-            { "question": "How often should I have a preventive dental visit?", "answer": "We recommend biannual visits for most patients, but your dentist may suggest a personalized schedule based on your oral health." },
-            { "question": "Is preventive dentistry covered by insurance?", "answer": "Most dental insurance plans cover preventive services like checkups and cleanings. We can help verify your coverage." },
-            { "question": "What's the difference between regular cleaning and deep cleaning?", "answer": "Regular cleaning focuses on surface plaque, while deep cleaning addresses tartar below the gumline—often needed for periodontal health." },
-            { "question": "Can children benefit from preventive dentistry?", "answer": "Absolutely. Early preventive care establishes good habits and monitors development, preventing future issues." }
+            { "question": "Con quale frequenza dovrei fare una visita preventiva dal dentista?", "answer": "Raccomandiamo visite semestrali per la maggior parte dei pazienti, ma il dentista potrebbe suggerire un programma personalizzato in base alla tua salute orale." },
+            { "question": "La odontoiatria preventiva è coperta dall'assicurazione?", "answer": "La maggior parte dei piani assicurativi dentali copre i servizi preventivi come controlli e pulizie. Possiamo aiutarti a verificare la tua copertura." },
+            { "question": "Qual è la differenza tra una pulizia normale e una pulizia profonda?", "answer": "La pulizia regolare si concentra sulla placca superficiale, mentre la pulizia profonda elimina il tartaro sotto la linea gengivale—spesso necessario per la salute parodontale." },
+            { "question": "I bambini possono beneficiare della odontoiatria preventiva?", "answer": "Assolutamente. La prevenzione precoce stabilisce buone abitudini e monitora lo sviluppo, prevenendo problemi futuri." }
         ];
 
         const footerLinks = [
