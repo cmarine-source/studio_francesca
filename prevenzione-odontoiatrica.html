@@ -301,10 +301,6 @@ tailwind.config = {
             return items.map(item => "<div class=\"bg-white rounded-lg p-5 border border-light-blue hover-lift\"><div class=\"text-accent-blue mb-3\"><i class=\"" + item.icon + " text-2xl\"></i></div><h3 class=\"font-semibold mb-2\">" + item.title + "</h3><p class=\"text-gray-600 text-sm\">" + item.description + "</p></div>").join("");
         }
 
-        function renderProcessSteps(items) {
-            return items.map(item => "<div class=\"flex items-start\"><div class=\"bg-primary-blue text-white rounded-full h-12 w-12 flex items-center justify-center mr-4\">" + item.step + "</div><div><h3 class=\"text-xl font-semibold mb-1\">" + item.title + "</h3><p class=\"text-gray-600 mb-2\">" + item.description + "</p><p class=\"text-accent-blue font-medium\">Duration: " + item.duration + "</p></div></div>").join("");
-        }
-
         function renderFAQ(items) {
             return items.map(item => "<div class=\"border border-gray-200 rounded-lg p-5\"><h3 class=\"font-semibold text-lg mb-2\">" + item.question + "</h3><p class=\"text-gray-600\">" + item.answer + "</p></div>").join("");
         }
@@ -325,7 +321,6 @@ const mobileNavMenu = document.getElementById("mobile-nav-menu");
 if (mobileNavMenu) mobileNavMenu.innerHTML = renderNavItems(navigationItems);
         document.getElementById("services-grid").innerHTML = renderServices(services);
         document.getElementById("benefits-grid").innerHTML = renderBenefits(benefits);
-        document.getElementById("process-steps").innerHTML = renderProcessSteps(processSteps);
         document.getElementById("faq-list").innerHTML = renderFAQ(faqItems);
         document.getElementById("footer-links").innerHTML = renderFooterLinks(footerLinks);
         document.getElementById("social-links").innerHTML = renderSocialLinks(socialLinks);
