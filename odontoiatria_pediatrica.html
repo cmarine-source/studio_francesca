@@ -194,59 +194,57 @@
         });
 
         // Dati dell'applicazione
-        const services = [
-            { title: "Visite di Avvicinamento (Play-Visit)", description: "Controlli eseguiti sotto forma di gioco per eliminare la paura e costruire un rapporto di fiducia con il bambino.", icon: "fas fa-calendar-check" },
-            { title: "Sigillatura dei Solchi", description: "Una pellicola protettiva applicata sui molari che impedisce ai batteri di annidarsi, riducendo drasticamente il rischio di carie.", icon: "fas fa-tooth" },
-            { title: "Educazione all'Igiene Orale", description: "Insegniamo ai piccoli le tecniche corrette di spazzolamento e l'importanza di una sana alimentazione in modo divertente.", icon: "fas fa-shield-alt" }
-        ];
+      const services = [
+    { 
+        title: "Visite di Avvicinamento", 
+        description: "Controlli eseguiti sotto forma di gioco per eliminare la paura e costruire fiducia con il bambino.", 
+        icon: "fas fa-hand-holding-heart" 
+    },
+    { 
+        title: "Sigillatura dei Solchi", 
+        description: "Una pellicola protettiva sui molari che impedisce ai batteri di annidarsi, riducendo il rischio di carie.", 
+        icon: "fas fa-tooth" 
+    },
+    { 
+        title: "Educazione all'Igiene", 
+        description: "Insegniamo le tecniche corrette di spazzolamento e la sana alimentazione in modo divertente.", 
+        icon: "fas fa-graduation-cap" 
+    }
+];
 
-        const benefits = [
+const benefits = [
     { 
         title: "Sviluppo Sano", 
-        description: "Monitoriamo la crescita corretta dei denti e delle strutture ossee.", 
+        description: "Monitoriamo la crescita corretta dei denti e delle strutture ossee del bambino.", 
         icon: "fas fa-child" 
     },
     { 
         title: "Denti Forti", 
-        description: "Proteggiamo lo smalto dai batteri con sigillature e fluoro.", 
+        description: "Proteggiamo lo smalto dai batteri con sigillature e applicazioni mirate di fluoro.", 
         icon: "fas fa-shield-alt" 
     },
     { 
         title: "Zero Paura", 
-        description: "Abituiamo il bambino a un rapporto positivo e sereno con il dentista.", 
-        icon: "fas fa-smile" 
+        description: "Abituiamo il piccolo a un rapporto positivo e sereno con la figura del dentista.", 
+        icon: "fas fa-smile-beam" 
     },
     { 
         title: "Risparmio Futuro", 
-        description: "Prevenire oggi evita costosi apparecchi o interventi complessi domani.", 
+        description: "Prevenire oggi evita costosi apparecchi o interventi complessi durante la crescita.", 
         icon: "fas fa-piggy-bank" 
     }
 ];
 
-        const faqItems = [
+const faqItems = [
     { 
         question: "A che età la prima visita?", 
-        answer: "Consigliamo il primo controllo verso i 3 anni per monitorare la crescita e instaurare un rapporto di fiducia." 
+        answer: "Consigliamo il primo controllo verso i 3 anni per monitorare lo sviluppo e instaurare un rapporto di amicizia." 
     },
     { 
         question: "Le sigillature sono dolorose?", 
-        answer: "Assolutamente no. È una procedura rapida, sicura e del tutto indolore che protegge i denti dalle carie." 
+        answer: "Assolutamente no. È una procedura rapida, sicura e del tutto indolore che protegge i denti per anni." 
     }
 ];
-
-        const footerLinks = [
-            { label: "Home", href: "index.html" },
-            { label: "Prevenzione", href: "#prevenzione" },
-            { label: "Servizi", href: "#servizi" },
-            { label: "FAQ", href: "#faq" }
-        ];
-
-        const socialLinks = [
-            { icon: "facebook", href: "#" },
-            { icon: "instagram", href: "#" },
-            { icon: "linkedin", href: "#" }
-        ];
-
         // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
             <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
