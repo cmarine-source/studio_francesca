@@ -194,36 +194,23 @@
         });
 
         // Dati dell'applicazione
-        const services = [
-            { title: "Protocollo Gengive Protette", description: "Trattamenti specifici per prevenire e curare la gengivite gravidica e il sanguinamento.", icon: "fas fa-calendar-check" },
-            { title: "Igiene Orale Dedicata", description: "Pulizia professionale profonda per bilanciare i cambiamenti del pH salino e proteggere lo smalto.", icon: "fas fa-tooth" },
-            { title: "Consulenza Pre-natale", description: "Consigli pratici su alimentazione e igiene per preparare la bocca del neonato alla salute futura.", icon: "fas fa-shield-alt" }
-        ];
+       const services = [
+    { title: "Protocollo Gengive Protette", description: "Trattamenti specifici per prevenire e curare la gengivite gravidica e il sanguinamento.", icon: "fas fa-heart" },
+    { title: "Igiene Orale Dedicata", description: "Pulizia professionale profonda per bilanciare i cambiamenti del pH salino e proteggere lo smalto.", icon: "fas fa-sparkles" },
+    { title: "Consulenza Pre-natale", description: "Consigli pratici su alimentazione e igiene per preparare la bocca del neonato alla salute futura.", icon: "fas fa-baby" }
+];
 
-        const benefits = [
-            { title: "Protezione del Neonato", description: "Ridurre i batteri nella bocca della mamma diminuisce il rischio di trasmissione precoce al piccolo.", icon: "fas fa-ban" },
-            { title: "Prevenzione del Parto Pretermine", description: "Il controllo delle infezioni gengivali (parodontite) è legato a una gravidanza più sicura e a termine.", icon: "fas fa-heart" },
-            { title: "Gestione delle Nausee", description: "Proteggiamo i tuoi denti dall'erosione acida causata spesso dai disturbi dei primi mesi.", icon: "fas fa-search" },
-            { title: "Serenità e Benessere", description: "Evita interventi d'urgenza complessi durante le fasi più delicate della gestazione.", icon: "fas fa-piggy-bank" }
-        ];
+const benefits = [
+    { title: "Protezione del Neonato", description: "Ridurre i batteri nella bocca della mamma diminuisce il rischio di trasmissione al piccolo.", icon: "fas fa-shield-virus" },
+    { title: "Gravidanza Sicura", description: "Il controllo delle infezioni gengivali è legato a una gestazione più sicura e a termine.", icon: "fas fa-check-circle" },
+    { title: "Gestione Nausee", description: "Proteggiamo i tuoi denti dall'erosione acida causata spesso dai disturbi dei primi mesi.", icon: "fas fa-leaf" },
+    { title: "Serenità Totale", description: "Evita interventi d'urgenza complessi durante le fasi più delicate della gestazione.", icon: "fas fa-smile" }
+];
 
-        const faqItems = [
-            { question: "È sicuro andare dal dentista in gravidanza?", answer: "Assolutamente sì. Il secondo trimestre è il periodo ideale per eseguire le sedute di igiene e i controlli." },
-            { question: "L'anestesia può far male al bambino?", answer: "Esistono anestetici specifici totalmente sicuri per la mamma e per il feto, da utilizzare solo se strettamente necessario." }
-        ];
-
-        const footerLinks = [
-            { label: "Home", href: "#home" },
-            { label: "Prevenzione", href: "#prevenzione" },
-            { label: "Servizi", href: "#servizi" },
-            { label: "FAQ", href: "#faq" }
-        ];
-
-        const socialLinks = [
-            { icon: "facebook", href: "#" },
-            { icon: "instagram", href: "#" },
-            { icon: "linkedin", href: "#" }
-        ];
+const faqItems = [
+    { question: "È sicuro andare dal dentista in gravidanza?", answer: "Assolutamente sì. Il secondo trimestre è il periodo ideale per eseguire le sedute di igiene e i controlli." },
+    { question: "L'anestesia può far male al bambino?", answer: "Esistono anestetici specifici totalmente sicuri per la mamma e per il feto, da utilizzare solo se necessario." }
+];
 
         // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
