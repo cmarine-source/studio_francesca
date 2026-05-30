@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Prevention & Oral Health Care | Professional Dental Studio</title>
+    <meta name="description" content="Premium dental prevention services for long-term oral health. Our preventative dentistry includes regular checkups, professional cleanings, fluoride treatments, and early diagnosis.">
+    <meta name="keywords" content="prevention odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-blue": "#2563EB",
+                        "light-blue": "#DBEAFE",
+                        "accent-blue": "#60A5FA",
+                        "secondary-gray": "#F3F4F6"
+                    },
+                    spacing: {
+                        "section": "80px"
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.8s ease-out",
+                        "slide-up": "slideUp 0.6s ease-out"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white text-gray-800 font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="https://picsum.photos/60?random=101" alt="Dental Studio Logo" class="h-12 w-12 rounded-full">
+                    <span class="ml-3 text-xl font-bold text-primary-blue">Dental Studio</span>
+                </div>
+                <ul id="nav-menu" class="flex gap-8"></ul>
+                <button id="mobile-menu-btn" class="md:hidden text-primary-blue">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 bg-white border rounded-lg p-4">
+                <ul id="mobile-nav-menu"></ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-light-blue to-white py-section">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">Professional Dental Prevention</h1>
+                    <p class="text-xl text-gray-600 mb-8">Protect your oral health with our premium preventative care services. Early detection saves time, money, and discomfort.</p>
+                    <button id="book-visit-btn" class="bg-primary-blue text-white px-8 py-3 rounded-full hover-lift font-semibold">Book a Visit</button>
+                </div>
+                <div class="animate-slide-up">
+                    <img src="https://picsum.photos/600/400?random=102" alt="Happy patient with dentist" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6">Why Prevention Matters</h2>
+            <div class="bg-secondary-gray rounded-xl p-8">
+                <p class="text-lg mb-4">Preventive dentistry is the foundation of long-term oral health. Regular dental checkups and professional cleanings can prevent serious issues before they develop.</p>
+                <p class="text-lg">Our approach focuses on proactive care, helping you maintain healthy teeth and gums while avoiding costly treatments in the future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Included -->
+    <section class="py-section bg-light-blue">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Our Prevention Services</h2>
+            <div id="services-grid" class="grid md:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Benefits of Preventive Care</2>
+            <div id="benefits-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="py-section bg-secondary-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">How Our Preventive Visit Works</h2>
+            <div id="process-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8">Frequently Asked Questions</h2>
+            <div id="faq-list" class="space-y-6"></div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-section bg-primary-blue text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-4">Start Protecting Your Oral Health Today</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Book a preventive dental visit and invest in your long-term wellness with our professional care team.</p>
+                <button id="final-book-btn" class="bg-white text-primary-blue px-10 py-4 rounded-full hover-lift font-semibold text-lg">Schedule Your Appointment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-section">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dental Studio</h3>
+                    <p class="text-gray-400">Premium dental prevention and oral health care.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul id="footer-links"></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">123 Health Street<br>Medical District<br>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <ul id="social-links" class="flex gap-4"></ul>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Dental Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-100 flex items-center justify-center">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold text-primary-blue mb-4">Book Your Visit</h3>
+            <form id="booking-form">
+                <div class="space-y-4">
+                    <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg">
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg">
+                    <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg">
+                    <select class="w-full p-3 border rounded-lg">
+                        <option value="">Select Service</option>
+                        <option value="checkup">Regular Checkup</option>
+                        <option value="cleaning">Professional Cleaning</option>
+                        <option value="fluoride">Fluoride Treatment</option>
+                    </select>
+                </div>
+                <div class="mt-6 flex justify-end gap-4">
+                    <button type="button" id="close-modal-btn" class="px-4 py-2 border rounded-lg">Cancel</button>
+                    <button type="submit" class="bg-primary-blue text-white px4 py-2 rounded-lg">Submit Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Data layer
+        const navigationItems = [
+            { "label": "Home", "href": "#home" },
+            { "label": "Prevention", "href": "#prevention" },
+            { "label": "Services", "href": "#services" },
+            { "label": "About", "href": "#about" },
+            { "label": "Contact", "href": "#contact" }
+        ];
+
+        const services = [
+            { "title": "Regular Checkups", "description": "Comprehensive dental examinations to monitor oral health and detect early signs of issues.", "icon": "fas fa-calendar-check" },
+            { "title": "Professional Cleanings", "description": "Deep cleaning procedures that remove plaque and tartar buildup for healthier gums.", "icon": "fas fa-tooth" },
+            { "title": "Fluoride Treatments", "description": "Protective fluoride applications to strengthen teeth and prevent cavities.", "icon": "fas fa-shield-alt" }
+        ];
+
+        const benefits = [
+            { "title": "Caries Prevention", "description": "Reduce risk of cavities through proactive care and hygiene.", "icon": "fas fa-ban" },
+            { "title": "Gum Health", "description": "Prevent periodontal diseases with regular cleanings and checkups.", "icon": "fas fa-heart" },
+            { "title": "Early Diagnosis", "description": "Identify problems before they become serious and require complex treatments.", "icon": "fas fa-search" },
+            { "title": "Cost Savings", "description": "Avoid expensive restorative procedures by maintaining preventive routines.", "icon": "fas fa-piggy-bank" }
+        ];
+
+        const processSteps = [
+            { "step": 1, "title": "Initial Consultation", "description": "Discuss your oral health history and concerns with our specialist.", "duration": "30 min" },
+            { "step": 2, "title": "Examination & X-Rays", "description": "Complete visual inspection and digital imaging for accurate assessment.", "duration": "20 min" },
+            { "step": 3, "title": "Cleaning & Hygiene", "description": "Professional plaque removal and polishing for optimal cleanliness.", "duration": "45 min" },
+            { "step": 4, "title": "Treatment Plan", "description": "Personalized recommendations and follow-up schedule based on findings.", "duration": "15 min" }
+        ];
+
+        const faqItems = [
+            { "question": "How often should I have a preventive dental visit?", "answer": "We recommend biannual visits for most patients, but your dentist may suggest a personalized schedule based on your oral health." },
+            { "question": "Is preventive dentistry covered by insurance?", "answer": "Most dental insurance plans cover preventive services like checkups and cleanings. We can help verify your coverage." },
+            { "question": "What's the difference between regular cleaning and deep cleaning?", "answer": "Regular cleaning focuses on surface plaque, while deep cleaning addresses tartar below the gumline—often needed for periodontal health." },
+            { "question": "Can children benefit from preventive dentistry?", "answer": "Absolutely. Early preventive care establishes good habits and monitors development, preventing future issues." }
+        ];
+
+        const footerLinks = [
+            { "label": "Privacy Policy", "href": "#privacy" },
+            { "label": "Terms of Service", "href": "#terms" },
+            { "label": "Careers", "href": "#careers" },
+            { "label": "Blog", "href": "#blog" }
+        ];
+
+        const socialLinks = [
+            { "platform": "Facebook", "icon": "fab fa-facebook", "href": "#facebook" },
+            { "platform": "Instagram", "icon": "fab fa-instagram", "href": "#instagram" },
+            { "platform": "Twitter", "icon": "fab fa-twitter", "href": "#twitter" },
+            { "platform": "LinkedIn", "icon": "fab fa-linkedin", "href": "#linkedin" }
+        ];
+
+        // Reusable render functions
+        function renderNavItems(items) {
+            return items.map(item => "<li><a href=\"" + item.href + "\" class=\"text-gray-700 hover:text-primary-blue font-medium\">" + item.label + "</a></li>").join("");
+        }
+
+        function renderServices(items) {
+            return items.map(item => "<div class=\"bg-white rounded-xl p-6 shadow-md hover-lift\"><div class=\"text-primary-blue mb-4\"><i class=\"" + item.icon + " text-3xl\"></i></div><h3 class=\"text-xl font-semibold mb-2\">" + item.title + "</h3><p class=\"text-gray-600\">" + item.description + "</p></div>").join("");
+        }
+
+        function renderBenefits(items) {
+            return items.map(item => "<div class=\"bg-white rounded-lg p-5 border border-light-blue hover-lift\"><div class=\"text-accent-blue mb-3\"><i class=\"" + item.icon + " text-2xl\"></i></div><h3 class=\"font-semibold mb-2\">" + item.title + "</h3><p class=\"text-gray-600 text-sm\">" + item.description + "</p></div>").join("");
+        }
+
+        function renderProcessSteps(items) {
+            return items.map(item => "<div class=\"flex items-start\"><div class=\"bg-primary-blue text-white rounded-full h-12 w-12 flex items-center justify-center mr-4\">" + item.step + "</div><div><h3 class=\"text-xl font-semibold mb-1\">" + item.title + "</h3><p class=\"text-gray-600 mb-2\">" + item.description + "</p><p class=\"text-accent-blue font-medium\">Duration: " + item.duration + "</p></div></div>").join("");
+        }
+
+        function renderFAQ(items) {
+            return items.map(item => "<div class=\"border border-gray-200 rounded-lg p-5\"><h3 class=\"font-semibold text-lg mb-2\">" + item.question + "</h3><p class=\"text-gray-600\">" + item.answer + "</p></div>").join("");
+        }
+
+        function renderFooterLinks(items) {
+            return items.map(item => "<li class=\"mb-2\"><a href=\"" + item.href + "\" class=\"text-gray-400 hover:text-white\">" + item.label + "</a></li>").join("");
+        }
+
+        function renderSocialLinks(items) {
+            return items.map(item => "<li><a href=\"" + item.href + "\" class=\"text-gray-400 hover:text-white text-2xl\"><i class=\"" + item.icon + "\"></i></a></li>").join("");
+        }
+
+        // DOM rendering
+        document.getElementById("nav-menu").innerHTML = renderNavItems(navigationItems);
+        document.getElementById("mobile-nav-menu").innerHTML = renderNavItems(navigationItems);
+        document.getElementById("services-grid").innerHTML = renderServices(services);
+        document.getElementById("benefits-grid").innerHTML = renderBenefits(benefits);
+        document.getElementById("process-steps").innerHTML = renderProcessSteps(processSteps);
+        document.getElementById("faq-list").innerHTML = renderFAQ(faqItems);
+        document.getElementById("footer-links").innerHTML = renderFooterLinks(footerLinks);
+        document.getElementById("social-links").innerHTML = renderSocialLinks(socialLinks);
+
+        // Event handlers
+        document.getElementById("mobile-menu-btn").addEventListener("click", function() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        });
+
+        function openBookingModal() {
+            document.getElementById("booking-modal").classList.remove("hidden");
+        }
+
+        function closeBookingModal() {
+            document.getElementById("booking-modal").classList.add("hidden");
+        }
+
+        document.getElementById("book-visit-btn").addEventListener("click", openBookingModal);
+        document.getElementById("final-book-btn").addEventListener("click", openBookingModal);
+        document.getElementById("close-modal-btn").addEventListener("click", closeBookingModal);
+
+        // Close modal on background click
+        document.getElementById("booking-modal").addEventListener("click", function(event) {
+            if (event.target === this) {
+                closeBookingModal();
+            }
+        });
+
+        // Form submission
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you! Your booking request has been submitted. We'll contact you shortly.");
+            closeBookingModal();
+        });
+
+        // Smooth scrolling for navigation links
+        document.addEventListener("click", function(event) {
+            const link = event.target.closest("a[href^='#']");
+            if (link) {
+                event.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
