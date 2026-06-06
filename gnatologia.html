@@ -152,8 +152,7 @@
             </a>
         </div>
     </section>
-
-    <footer class="bg-navy-900 text-white py-16">
+<footer class="bg-navy-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
@@ -165,7 +164,6 @@
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
-                    <ul id="social-links" class="flex space-x-4"></ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
@@ -176,8 +174,12 @@
                     <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
-                © 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>© 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -192,55 +194,55 @@
         });
 
         // Dati dell'applicazione
-       const services = [
-    { 
-        title: "Analisi Funzionale ATM", 
-        description: "Valutazione approfondita del movimento mandibolare per individuare click, blocchi o tensioni muscolari.", 
-        icon: "fas fa-sync-alt" 
-    },
-    { 
-        title: "Bite Personalizzati", 
-        description: "Progettazione di dispositivi intraorali su misura per proteggere i denti e rilassare la muscolatura masticatoria.", 
-        icon: "fas fa-teeth-open" 
-    },
-    { 
-        title: "Screening Posturale", 
-        description: "Analisi delle correlazioni tra occlusione dentale e assetto posturale per un benessere globale del corpo.", 
-        icon: "fas fa-street-view" 
-    }
-];
-   const benefits = [
-    { 
-        title: "Sollievo dal Dolore", 
-        description: "Riduzione significativa di cefalee muscolo-tensive, dolori cervicali e fastidi articolari.", 
-        icon: "fas fa-medkit" 
-    },
-    { 
-        title: "Protezione Dentale", 
-        description: "Preveniamo l'usura smaltata e le fratture causate dal bruxismo e dal serramento notturno.", 
-        icon: "fas fa-shield-virus" 
-    },
-    { 
-        title: "Riposo Rigenerante", 
-        description: "Miglioriamo la qualità del sonno rilassando le tensioni accumulate durante la giornata.", 
-        icon: "fas fa-bed" 
-    },
-    { 
-        title: "Equilibrio Corporeo", 
-        description: "Un'occlusione corretta favorisce una postura più bilanciata, riducendo gli stress alla colonna vertebrale.", 
-        icon: "fas fa-balance-scale" 
-    }
-];
-    const faqItems = [
-    { 
-        question: "Come capisco se soffro di bruxismo?", 
-        answer: "I segnali comuni sono risveglio con mascella affaticata, denti sensibili o usura visibile dei bordi dentali." 
-    },
-    { 
-        question: "Il bite deve essere portato per sempre?", 
-        answer: "Dipende dal caso clinico; spesso è un supporto fondamentale durante la notte per stabilizzare i risultati e proteggere l'articolazione." 
-    }
-];
+        const services = [
+            { 
+                title: "Analisi Funzionale ATM", 
+                description: "Valutazione approfondita del movimento mandibolare per individuare click, blocchi o tensioni muscolari.", 
+                icon: "fas fa-sync-alt" 
+            },
+            { 
+                title: "Bite Personalizzati", 
+                description: "Progettazione di dispositivi intraorali su misura per proteggere i denti e rilassare la muscolatura masticatoria.", 
+                icon: "fas fa-teeth-open" 
+            },
+            { 
+                title: "Screening Posturale", 
+                description: "Analisi delle correlazioni tra occlusione dentale e assetto posturale per un benessere globale del corpo.", 
+                icon: "fas fa-street-view" 
+            }
+        ];
+        const benefits = [
+            { 
+                title: "Sollievo dal Dolore", 
+                description: "Riduzione significativa di cefalee muscolo-tensive, dolori cervicali e fastidi articolari.", 
+                icon: "fas fa-medkit" 
+            },
+            { 
+                title: "Protezione Dentale", 
+                description: "Preveniamo l'usura smaltata e le fratture causate dal bruxismo e dal serramento notturno.", 
+                icon: "fas fa-shield-virus" 
+            },
+            { 
+                title: "Riposo Rigenerante", 
+                description: "Miglioriamo la qualità del sonno rilassando le tensioni accumulate durante la giornata.", 
+                icon: "fas fa-bed" 
+            },
+            { 
+                title: "Equilibrio Corporeo", 
+                description: "Un'occlusione corretta favorisce una postura più bilanciata, riducendo gli stress alla colonna vertebrale.", 
+                icon: "fas fa-balance-scale" 
+            }
+        ];
+        const faqItems = [
+            { 
+                question: "Come capisco si soffro di bruxismo?", 
+                answer: "I segnali comuni sono risveglio con mascella affaticata, denti sensibili o usura visibile dei bordi dentali." 
+            },
+            { 
+                question: "Il bite deve essere portato per sempre?", 
+                answer: "Dipende dal caso clinico; spesso è un supporto fondamentale durante la notte per stabilizzare i risultati e proteggere l'articolazione." 
+            }
+        ];
 
         const footerLinks = [
             { label: "Home", href: "index.html" },
@@ -249,11 +251,8 @@
             { label: "FAQ", href: "#faq" }
         ];
 
-        const socialLinks = [
-            { icon: "facebook", href: "#" },
-            { icon: "instagram", href: "#" },
-            { icon: "linkedin", href: "#" }
-        ];
+        // Array social svuotato per rimuovere i cicli di rendering delle icone
+        const socialLinks = [];
 
         // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
@@ -279,14 +278,7 @@
         document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
             <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
 
-        document.getElementById("social-links").innerHTML = socialLinks.map(s => `
-            <li>
-                <a href="${s.href}" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                    <i data-lucide="${s.icon}" class="w-5 h-5"></i>
-                </a>
-            </li>`).join("");
-
-        // Rielabora le icone caricate dinamicamente per i social network
+        // Rielabora le icone caricate dinamicamente
         lucide.createIcons();
     </script>
 </body>
