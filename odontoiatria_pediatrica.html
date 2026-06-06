@@ -152,8 +152,7 @@
             </a>
         </div>
     </section>
-
-    <footer class="bg-navy-900 text-white py-16">
+<footer class="bg-navy-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
@@ -165,7 +164,6 @@
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
-                    <ul id="social-links" class="flex space-x-4"></ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
@@ -176,8 +174,12 @@
                     <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
-                © 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>© 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -192,57 +194,68 @@
         });
 
         // Dati dell'applicazione
-      const services = [
-    { 
-        title: "Visite di Avvicinamento", 
-        description: "Controlli eseguiti sotto forma di gioco per eliminare la paura e costruire fiducia con il bambino.", 
-        icon: "fas fa-hand-holding-heart" 
-    },
-    { 
-        title: "Sigillatura dei Solchi", 
-        description: "Una pellicola protettiva sui molari che impedisce ai batteri di annidarsi, riducendo il rischio di carie.", 
-        icon: "fas fa-tooth" 
-    },
-    { 
-        title: "Educazione all'Igiene", 
-        description: "Insegniamo le tecniche corrette di spazzolamento e la sana alimentazione in modo divertente.", 
-        icon: "fas fa-graduation-cap" 
-    }
-];
+        const services = [
+            { 
+                title: "Visite di Avvicinamento", 
+                description: "Controlli eseguiti sotto forma di gioco per eliminare la paura e costruire fiducia con il bambino.", 
+                icon: "fas fa-hand-holding-heart" 
+            },
+            { 
+                title: "Sigillatura dei Solchi", 
+                description: "Una pellicola protettiva sui molari che impedisce ai batteri di annidarsi, riducendo il rischio di carie.", 
+                icon: "fas fa-tooth" 
+            },
+            { 
+                title: "Educazione all'Igiene", 
+                description: "Insegniamo le tecniche corrette di spazzolamento e la sana alimentazione in modo divertente.", 
+                icon: "fas fa-graduation-cap" 
+            }
+        ];
 
-const benefits = [
-    { 
-        title: "Sviluppo Sano", 
-        description: "Monitoriamo la crescita corretta dei denti e delle strutture ossee del bambino.", 
-        icon: "fas fa-child" 
-    },
-    { 
-        title: "Denti Forti", 
-        description: "Proteggiamo lo smalto dai batteri con sigillature e applicazioni mirate di fluoro.", 
-        icon: "fas fa-shield-alt" 
-    },
-    { 
-        title: "Zero Paura", 
-        description: "Abituiamo il piccolo a un rapporto positivo e sereno con la figura del dentista.", 
-        icon: "fas fa-smile-beam" 
-    },
-    { 
-        title: "Risparmio Futuro", 
-        description: "Prevenire oggi evita costosi apparecchi o interventi complessi durante la crescita.", 
-        icon: "fas fa-piggy-bank" 
-    }
-];
+        const benefits = [
+            { 
+                title: "Sviluppo Sano", 
+                description: "Monitoriamo la crescita corretta dei denti e delle strutture ossee del bambino.", 
+                icon: "fas fa-child" 
+            },
+            { 
+                title: "Denti Forti", 
+                description: "Proteggiamo lo smalto dai batteri con sigillature e applicazioni mirate di fluoro.", 
+                icon: "fas fa-shield-alt" 
+            },
+            { 
+                title: "Zero Paura", 
+                description: "Abituiamo il piccolo a un rapporto positivo e sereno con la figura del dentista.", 
+                icon: "fas fa-smile-beam" 
+            },
+            { 
+                title: "Risparmio Futuro", 
+                description: "Prevenire oggi evita costosi apparecchi o interventi complessi durante la crescita.", 
+                icon: "fas fa-piggy-bank" 
+            }
+        ];
 
-const faqItems = [
-    { 
-        question: "A che età la prima visita?", 
-        answer: "Consigliamo il primo controllo verso i 3 anni per monitorare lo sviluppo e instaurare un rapporto di amicizia." 
-    },
-    { 
-        question: "Le sigillature sono dolorose?", 
-        answer: "Assolutamente no. È una procedura rapida, sicura e del tutto indolore che protegge i denti per anni." 
-    }
-];
+        const faqItems = [
+            { 
+                question: "A che età la prima visita?", 
+                answer: "Consigliamo il primo controllo verso i 3 anni per monitorare lo sviluppo e instaurare un rapporto di amicizia." 
+            },
+            { 
+                question: "Le sigillature sono dolorose?", 
+                answer: "Assolutamente no. È una procedura rapida, sicura e del tutto indolore che protegge i denti per anni." 
+            }
+        ];
+
+        const footerLinks = [
+            { label: "Home", href: "index.html" },
+            { label: "Prevenzione", href: "#prevenzione" },
+            { label: "Servizi", href: "#servizi" },
+            { label: "FAQ", href: "#faq" }
+        ];
+
+        // Array social vuoto per eliminare le icone
+        const socialLinks = [];
+
         // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
             <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
@@ -267,14 +280,7 @@ const faqItems = [
         document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
             <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
 
-        document.getElementById("social-links").innerHTML = socialLinks.map(s => `
-            <li>
-                <a href="${s.href}" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                    <i data-lucide="${s.icon}" class="w-5 h-5"></i>
-                </a>
-            </li>`).join("");
-
-        // Rielabora le icone caricate dinamicamente per i social network
+        // Rielabora le icone caricate dinamicamente
         lucide.createIcons();
     </script>
 </body>
