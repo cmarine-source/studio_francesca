@@ -153,7 +153,7 @@
         </div>
     </section>
 
-    <footer class="bg-navy-900 text-white py-16">
+  <footer class="bg-navy-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
@@ -165,7 +165,6 @@
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
-                    <ul id="social-links" class="flex space-x-4"></ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
@@ -176,8 +175,12 @@
                     <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
-                © 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>© 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -192,56 +195,57 @@
         });
 
         // Dati dell'applicazione
-       const services = [
-    { 
-        title: "Check-up Ortodontico Digitale", 
-        description: "Studio del caso con scansioni 3D e analisi cefalometrica per una diagnosi precisa e personalizzata.", 
-        icon: "fas fa-laptop-medical" 
-    },
-    { 
-        title: "Ortodonzia Intercettiva", 
-        description: "Interventi precoci nei bambini per correggere le basi ossee e guidare l'eruzione dei denti permanenti.", 
-        icon: "fas fa-child" 
-    },
-    { 
-        title: "Allineatori Invisibili", 
-        description: "Trattamenti estetici e rimovibili che permettono di allineare i denti in modo discreto e confortevole.", 
-        icon: "fas fa-certificate" 
-    }
-];
+        const services = [
+            { 
+                title: "Check-up Ortodontico Digitale", 
+                description: "Studio del caso con scansioni 3D e analisi cefalometrica per una diagnosi precisa e personalizzata.", 
+                icon: "fas fa-laptop-medical" 
+            },
+            { 
+                title: "Ortodonzia Intercettiva", 
+                description: "Interventi precoci nei bambini per correggere le basi ossee e guidare l'eruzione dei denti permanenti.", 
+                icon: "fas fa-child" 
+            },
+            { 
+                title: "Allineatori Invisibili", 
+                description: "Trattamenti estetici e rimovibili che permettono di allineare i denti in modo discreto e confortevole.", 
+                icon: "fas fa-certificate" 
+            }
+        ];
 
-      const benefits = [
-    { 
-        title: "Masticazione Ottimale", 
-        description: "Correggere il morso migliora la digestione e previene disturbi all'articolazione temporo-mandibolare.", 
-        icon: "fas fa-apple-alt" 
-    },
-    { 
-        title: "Igiene Facilitata", 
-        description: "Denti ben allineati sono più facili da pulire, riducendo drasticamente placca e tartaro.", 
-        icon: "fas fa-sparkles" 
-    },
-    { 
-        title: "Estetica del Volto", 
-        description: "Miglioriamo l'armonia del profilo e la luminosità del sorriso a ogni età.", 
-        icon: "fas fa-user-check" 
-    },
-    { 
-        title: "Stabilità nel Tempo", 
-        description: "Un trattamento ben pianificato garantisce risultati duraturi e una salute orale costante.", 
-        icon: "fas fa-infinity" 
-    }
-];
-      const faqItems = [
-    { 
-        question: "L'apparecchio è solo per bambini?", 
-        answer: "Assolutamente no. Grazie alle moderne tecniche invisibili, è possibile allineare il sorriso a qualsiasi età con il minimo impatto estetico." 
-    },
-    { 
-        question: "Quanto dura un trattamento?", 
-        answer: "La durata varia in base alla complessità del caso, ma mediamente oscilla tra i 12 e i 24 mesi con controlli regolari." 
-    }
-];
+        const benefits = [
+            { 
+                title: "Masticazione Ottimale", 
+                description: "Correggere il morso migliora la digestione e previene disturbi all'articolazione temporo-mandibolare.", 
+                icon: "fas fa-apple-alt" 
+            },
+            { 
+                title: "Igiene Facilitata", 
+                description: "Denti ben allineati sono più facili da pulire, riducendo drasticamente placca e tartaro.", 
+                icon: "fas fa-sparkles" 
+            },
+            { 
+                title: "Estetica del Volto", 
+                description: "Miglioriamo l'armonia del profilo e la luminosità del sorriso a ogni età.", 
+                icon: "fas fa-user-check" 
+            },
+            { 
+                title: "Stabilità nel Tempo", 
+                description: "Un trattamento ben pianificato garantisce risultati duraturi e una salute orale costante.", 
+                icon: "fas fa-infinity" 
+            }
+        ];
+
+        const faqItems = [
+            { 
+                question: "L'apparecchio è solo per bambini?", 
+                answer: "Assolutamente no. Grazie alle moderne tecniche invisibili, è possibile allineare il sorriso a qualsiasi età con il minimo impatto estetico." 
+            },
+            { 
+                question: "Quanto dura un trattamento?", 
+                answer: "La durata varia in base alla complessità del caso, ma mediamente oscilla tra i 12 e i 24 mesi con controlli regolari." 
+            }
+        ];
 
         const footerLinks = [
             { label: "Home", href: "index.html" },
@@ -250,11 +254,8 @@
             { label: "FAQ", href: "#faq" }
         ];
 
-        const socialLinks = [
-            { icon: "facebook", href: "#" },
-            { icon: "instagram", href: "#" },
-            { icon: "linkedin", href: "#" }
-        ];
+        // Array social vuoto per eliminare i social
+        const socialLinks = [];
 
         // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
@@ -280,14 +281,7 @@
         document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
             <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
 
-        document.getElementById("social-links").innerHTML = socialLinks.map(s => `
-            <li>
-                <a href="${s.href}" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                    <i data-lucide="${s.icon}" class="w-5 h-5"></i>
-                </a>
-            </li>`).join("");
-
-        // Rielabora le icone caricate dinamicamente per i social network
+        // Rielabora le icone caricate dinamicamente
         lucide.createIcons();
     </script>
 </body>
