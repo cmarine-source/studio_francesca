@@ -153,7 +153,7 @@
         </div>
     </section>
 
-    <footer class="bg-navy-900 text-white py-16">
+  <footer class="bg-navy-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
@@ -165,7 +165,6 @@
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
-                    <ul id="social-links" class="flex space-x-4"></ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
@@ -176,8 +175,12 @@
                     <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
-                © 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>© 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -192,22 +195,33 @@
         });
 
         // Dati dell'applicazione
-       const services = [
-    { title: "Protocollo Gengive Protette", description: "Trattamenti specifici per prevenire e curare la gengivite gravidica e il sanguinamento.", icon: "fas fa-heart" },
-    { title: "Igiene Orale Dedicata", description: "Pulizia professionale profonda per bilanciare i cambiamenti del pH salino e proteggere lo smalto.", icon: "fas fa-tooth" },
-    { title: "Consulenza Pre-natale", description: "Consigli pratici su alimentazione e igiene per preparare la bocca del neonato alla salute futura.", icon: "fas fa-baby" }
-];
-const benefits = [
-    { title: "Protezione del Neonato", description: "Ridurre i batteri nella bocca della mamma diminuisce il rischio di trasmissione al piccolo.", icon: "fas fa-shield-virus" },
-    { title: "Gravidanza Sicura", description: "Il controllo delle infezioni gengivali è legato a una gestazione più sicura e a termine.", icon: "fas fa-check-circle" },
-    { title: "Gestione Nausee", description: "Proteggiamo i tuoi denti dall'erosione acida causata spesso dai disturbi dei primi mesi.", icon: "fas fa-leaf" },
-    { title: "Serenità Totale", description: "Evita interventi d'urgenza complessi durante le fasi più delicate della gestazione.", icon: "fas fa-smile" }
-];
+        const services = [
+            { title: "Protocollo Gengive Protette", description: "Trattamenti specifici per prevenire e curare la gengivite gravidica e il sanguinamento.", icon: "fas fa-heart" },
+            { title: "Igiene Orale Dedicata", description: "Pulizia professionale profonda per bilanciare i cambiamenti del pH salino e proteggere lo smalto.", icon: "fas fa-tooth" },
+            { title: "Consulenza Pre-natale", description: "Consigli pratici su alimentazione e igiene per preparare la bocca del neonato alla salute futura.", icon: "fas fa-baby" }
+        ];
 
-const faqItems = [
-    { question: "È sicuro andare dal dentista in gravidanza?", answer: "Assolutamente sì. Il secondo trimestre è il periodo ideale per eseguire le sedute di igiene e i controlli." },
-    { question: "L'anestesia può far male al bambino?", answer: "Esistono anestetici specifici totalmente sicuri per la mamma e per il feto, da utilizzare solo se necessario." }
-];
+        const benefits = [
+            { title: "Protezione del Neonato", description: "Ridurre i batteri nella bocca della mamma diminuisce il rischio di trasmissione al piccolo.", icon: "fas fa-shield-virus" },
+            { title: "Gravidanza Sicura", description: "Il controllo delle infezioni gengivali è legato a una gestazione più sicura e a termine.", icon: "fas fa-check-circle" },
+            { title: "Gestione Nausee", description: "Proteggiamo i tuoi denti dall'erosione acida causata spesso dai disturbi dei primi mesi.", icon: "fas fa-leaf" },
+            { title: "Serenità Totale", description: "Evita interventi d'urgenza complessi durante le fasi più delicate della gestazione.", icon: "fas fa-smile" }
+        ];
+
+        const faqItems = [
+            { question: "È sicuro andare dal dentista in gravidanza?", answer: "Assolutamente sì. Il secondo trimestre è il periodo ideale per eseguire le sedute di igiene e i controlli." },
+            { question: "L'anestesia può far male al bambino?", answer: "Esistono anestetici specifici totalmente sicuri per la mamma e per il feto, da utilizzare solo se necessario." }
+        ];
+
+        const footerLinks = [
+            { label: "Home", href: "index.html" },
+            { label: "Prevenzione", href: "#prevenzione" },
+            { label: "Servizi", href: "#servizi" },
+            { label: "FAQ", href: "#faq" }
+        ];
+
+        // Array social svuotato per rimuovere i social
+        const socialLinks = [];
 
         // Rendering dinamico degli elementi della pagina
         document.getElementById("services-grid").innerHTML = services.map(s => `
@@ -233,14 +247,7 @@ const faqItems = [
         document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
             <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
 
-        document.getElementById("social-links").innerHTML = socialLinks.map(s => `
-            <li>
-                <a href="${s.href}" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-600 transition-colors">
-                    <i data-lucide="${s.icon}" class="w-5 h-5"></i>
-                </a>
-            </li>`).join("");
-
-        // Rielabora le icone caricate dinamicamente per i social network
+        // Rielabora le icone caricate dinamicamente
         lucide.createIcons();
     </script>
 </body>
