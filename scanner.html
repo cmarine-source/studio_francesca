@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Intraorale - Studio Dott.ssa Francesca Capasso</title>
+
+    <meta name="description" content="Scanner intraorale digitale per impronte dentali precise, rapide e senza materiali tradizionali. Tecnologia moderna per comfort e precisione.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0c1e3d',
+                            800: '#1e3a8a',
+                        },
+                        medical: {
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        "light-blue": "#DBEAFE",
+                        "secondary-gray": "#F3F4F6"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+        <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="sparkles" class="text-medical-600"></i>
+            <div>
+                <p class="font-bold text-navy-800">Studio Odontoiatrico</p>
+                <p class="text-sm text-medical-600">Dott.ssa Francesca Capasso</p>
+            </div>
+        </a>
+
+        <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-medical-600">Home</a>
+            <a href="#info" class="hover:text-medical-600">Scanner</a>
+            <a href="#vantaggi" class="hover:text-medical-600">Vantaggi</a>
+            <a href="index.html#contatti" class="bg-medical-600 text-white px-5 py-2 rounded-full">
+                Prenota visita
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- TESTO -->
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4">
+                Scanner Intraorale
+            </h1>
+
+            <p class="text-xl text-gray-600 mb-6">
+                Impronte digitali precise, veloci e completamente confortevoli
+            </p>
+
+            <a href="index.html#contatti"
+               class="bg-medical-600 text-white px-6 py-3 rounded-full font-semibold inline-block">
+                Prenota una visita
+            </a>
+        </div>
+
+        <!-- IMMAGINE -->
+        <div>
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95"
+                 class="rounded-xl shadow-lg w-full object-cover"
+                 alt="Scanner intraorale dentale">
+        </div>
+
+    </div>
+</section>
+
+<!-- INFO -->
+<section id="info" class="py-20 bg-secondary-gray">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-6">
+            Cos’è lo scanner intraorale?
+        </h2>
+
+        <p class="text-lg text-gray-700">
+            Lo scanner intraorale è una tecnologia digitale che permette di rilevare impronte dentali senza materiali da mordere.
+            Il risultato è un modello 3D estremamente preciso delle arcate dentali.
+        </p>
+
+    </div>
+</section>
+
+<!-- TECNOLOGIA -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-8">
+            Come funziona
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="p-6 bg-white shadow rounded-xl border">
+                <i data-lucide="scan" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Acquisizione digitale</h3>
+                <p class="text-gray-600">Una piccola telecamera scansiona la bocca in tempo reale.</p>
+            </div>
+
+            <div class="p-6 bg-white shadow rounded-xl border">
+                <i data-lucide="layers" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Modello 3D</h3>
+                <p class="text-gray-600">Le immagini vengono convertite in un modello tridimensionale.</p>
+            </div>
+
+            <div class="p-6 bg-white shadow rounded-xl border">
+                <i data-lucide="cpu" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Analisi immediata</h3>
+                <p class="text-gray-600">Il dentista valuta subito il caso clinico.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- VANTAGGI -->
+<section id="vantaggi" class="py-20 bg-light-blue">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-8">
+            Vantaggi
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Zero fastidio</h3>
+                <p class="text-sm text-gray-600">Niente paste o materiali da impronta.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Massima precisione</h3>
+                <p class="text-sm text-gray-600">Modelli digitali estremamente accurati.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Risultato immediato</h3>
+                <p class="text-sm text-gray-600">Scansione in pochi minuti.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Più comfort</h3>
+                <p class="text-sm text-gray-600">Esperienza molto più semplice per il paziente.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p>© 2026 Studio Odontoiatrico Dott.ssa Francesca Capasso</p>
+        <a href="index.html#contatti" class="text-medical-400 block mt-2">
+            Contatti
+        </a>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
