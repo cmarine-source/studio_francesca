@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiologia Digitale - Studio Dott.ssa Francesca Capasso</title>
+
+    <meta name="description" content="Tecnologia di radiologia digitale ad alta precisione per diagnosi rapide e sicure con minima esposizione ai raggi X.">
+    <meta name="keywords" content="radiologia digitale, rx dentale, tac dentale, diagnosi odontoiatrica, imaging 3d">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#0c1e3d' },
+                        medical: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        "primary-blue": "#2563EB",
+                        "light-blue": "#DBEAFE",
+                        "secondary-gray": "#F3F4F6"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- HERO -->
+<section class="pt-32 pb-20 bg-gradient-to-r from-light-blue to-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- TESTO -->
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">
+                Radiologia Digitale
+            </h1>
+
+            <p class="text-xl text-gray-600 mb-6">
+                Diagnosi rapide, precise e a bassa esposizione ai raggi X
+            </p>
+
+            <a href="#contatti"
+               class="bg-primary-blue text-white px-6 py-3 rounded-full font-semibold inline-block">
+                Prenota una visita
+            </a>
+        </div>
+
+        <!-- IMMAGINE A DESTRA -->
+        <div>
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
+                 class="rounded-xl shadow-lg w-full object-cover"
+                 alt="Radiologia digitale dentale">
+        </div>
+
+    </div>
+</section>
+
+<!-- DESCRIZIONE -->
+<section class="py-20">
+    <div class="container mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-primary-blue mb-6">
+            A cosa serve la radiologia digitale?
+        </h2>
+
+        <div class="bg-secondary-gray p-8 rounded-xl">
+            <p class="text-lg mb-4">
+                La radiologia digitale permette di ottenere immagini ad altissima precisione dei denti e delle strutture ossee.
+            </p>
+
+            <p class="text-lg">
+                È fondamentale per diagnosticare carie profonde, infezioni, problemi ossei e pianificare trattamenti implantari con massima sicurezza.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- TECNOLOGIE -->
+<section class="py-20 bg-light-blue">
+    <div class="container mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-primary-blue mb-8">
+            Tecnologie utilizzate
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-6 rounded-xl shadow">
+                <i data-lucide="scan" class="text-primary-blue w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold text-lg mb-2">RX Digitale Endorale</h3>
+                <p class="text-gray-600">Immagini dettagliate dei singoli denti in pochi secondi.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow">
+                <i data-lucide="layers" class="text-primary-blue w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold text-lg mb-2">TAC Cone Beam 3D</h3>
+                <p class="text-gray-600">Ricostruzione tridimensionale delle arcate dentali.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow">
+                <i data-lucide="eye" class="text-primary-blue w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold text-lg mb-2">Ortopanoramica Digitale</h3>
+                <p class="text-gray-600">Panoramica completa di denti e ossa mascellari.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BENEFICI -->
+<section class="py-20">
+    <div class="container mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-primary-blue mb-8">
+            Vantaggi
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white border p-5 rounded-lg text-center">
+                <h3 class="font-semibold mb-2">Bassa esposizione</h3>
+                <p class="text-gray-600 text-sm">Riduzione significativa delle radiazioni.</p>
+            </div>
+
+            <div class="bg-white border p-5 rounded-lg text-center">
+                <h3 class="font-semibold mb-2">Diagnosi immediata</h3>
+                <p class="text-gray-600 text-sm">Risultati disponibili in tempo reale.</p>
+            </div>
+
+            <div class="bg-white border p-5 rounded-lg text-center">
+                <h3 class="font-semibold mb-2">Alta precisione</h3>
+                <p class="text-gray-600 text-sm">Immagini estremamente dettagliate.</p>
+            </div>
+
+            <div class="bg-white border p-5 rounded-lg text-center">
+                <h3 class="font-semibold mb-2">Maggiore sicurezza</h3>
+                <p class="text-gray-600 text-sm">Pianificazione clinica più accurata.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
