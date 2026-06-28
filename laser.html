@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laser Dentistry - Studio Dott.ssa Francesca Capasso</title>
 
-    <meta name="description" content="Laser dentistry: trattamenti odontoiatrici minimamente invasivi, senza dolore, con guarigione rapida e massima precisione.">
+    <title>Radiologia Digitale - Studio Dott.ssa Francesca Capasso</title>
+
+    <meta name="description" content="Tecnologia di radiologia digitale ad alta precisione per diagnosi rapide e sicure con minima esposizione ai raggi X.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,8 +15,14 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { 800: '#1e3a8a', 900: '#0c1e3d' },
-                        medical: { 600: '#2563eb', 700: '#1d4ed8' },
+                        navy: { 900: '#0c1e3d' },
+                        medical: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        "primary-blue": "#2563EB",
                         "light-blue": "#DBEAFE",
                         "secondary-gray": "#F3F4F6"
                     }
@@ -27,7 +34,22 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+        <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="sparkles" class="w-6 h-6 text-medical-600"></i>
+            <div class="flex flex-col">
+                <span class="font-bold text-navy-900">Studio Odontoiatrico</span>
+                <span class="text-sm text-medical-600">Dott.ssa Capasso</span>
+            </div>
+        </a>
+
+    </div>
+</nav>
 
 <!-- NAV -->
 <nav class="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100">
