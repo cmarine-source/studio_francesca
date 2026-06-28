@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiologia Digitale - Studio Dott.ssa Francesca Capasso</title>
+    <title>Prevenzione Odontoiatrica - Studio Dott.ssa Francesca Capasso</title>
 
-    <meta name="description" content="Tecnologia di radiologia digitale ad alta precisione per diagnosi rapide e sicure con minima esposizione ai raggi X.">
-    <meta name="keywords" content="radiologia digitale, rx dentale, tac dentale, diagnosi odontoiatrica, imaging 3d">
+    <meta name="description" content="Servizi premium di prevenzione dentale per una salute orale a lungo termine. Include check-up regolari, pulizie professionali e diagnosi precoce.">
+    <meta name="keywords" content="prevenzione odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -16,7 +15,10 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { 900: '#0c1e3d' },
+                        navy: {
+                            900: '#0c1e3d',
+                            800: '#1e3a8a',
+                        },
                         medical: {
                             50: '#eff6ff',
                             100: '#dbeafe',
@@ -25,22 +27,75 @@
                         },
                         "primary-blue": "#2563EB",
                         "light-blue": "#DBEAFE",
+                        "accent-blue": "#60A5FA",
                         "secondary-gray": "#F3F4F6"
+                    },
+                    spacing: {
+                        section: "80px"
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.8s ease-out",
+                        "slide-up": "slideUp 0.6s ease-out"
                     }
                 }
             }
         }
     </script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1); }
+    </style>
 </head>
 
-<body class="bg-white text-gray-800 font-sans">
+<body class="min-h-screen bg-white text-gray-800 font-sans">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-600"></i>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold text-navy-800 leading-tight">Studio Odontoiatrico</span>
+                            <span class="text-sm text-medical-600 font-medium">Dott.ssa Francesca Capasso</span>
+                        </div>
+                    </a>
+                </div>
 
-<!-- HERO -->
-<section class="pt-32 pb-20 bg-gradient-to-r from-light-blue to-white">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Home</a>
+                    <a href="#prevenzione" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Prevenzione</a>
+                    <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
+                    <a href="#faq" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">FAQ</a>
+                    <a href="index.html#contatti" class="inline-block bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30 text-center">
+                        Prenota una visita
+                    </a>
+                </div>
 
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-medical-600 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-medical-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Home</a>
+                <a href="#prevenzione" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Prevenzione</a>
+                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Servizi</a>
+                <a href="index.html#contatti" class="block w-full mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
+                    Prenota una visita
+                </a>
+            </div>
+        </div>
+    </nav>
         <!-- TESTO -->
         <div>
             <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">
