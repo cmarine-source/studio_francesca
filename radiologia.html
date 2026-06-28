@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prevenzione Odontoiatrica - Studio Dott.ssa Francesca Capasso</title>
 
-    <meta name="description" content="Servizi premium di prevenzione dentale per una salute orale a lungo termine. Include check-up regolari, pulizie professionali e diagnosi precoce.">
-    <meta name="keywords" content="prevenzione odontoiatrica, pulizia dentale professionale, visita dentistica preventiva, salute orale, prevenzione carie, controllo periodico">
+    <title>Radiologia Digitale - Studio Dott.ssa Francesca Capasso</title>
+
+    <meta name="description" content="Tecnologia di radiologia digitale ad alta precisione per diagnosi rapide e sicure con minima esposizione ai raggi X.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -15,10 +15,7 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            900: '#0c1e3d',
-                            800: '#1e3a8a',
-                        },
+                        navy: { 900: '#0c1e3d' },
                         medical: {
                             50: '#eff6ff',
                             100: '#dbeafe',
@@ -27,76 +24,42 @@
                         },
                         "primary-blue": "#2563EB",
                         "light-blue": "#DBEAFE",
-                        "accent-blue": "#60A5FA",
                         "secondary-gray": "#F3F4F6"
-                    },
-                    spacing: {
-                        section: "80px"
-                    },
-                    animation: {
-                        "fade-in": "fadeIn 0.8s ease-out",
-                        "slide-up": "slideUp 0.6s ease-out"
                     }
                 }
             }
         }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(37, 99, 235, 0.1); }
-    </style>
 </head>
 
-<body class="min-h-screen bg-white text-gray-800 font-sans">
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-medical-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center space-x-2">
-                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-600"></i>
-                        <div class="flex flex-col">
-                            <span class="text-lg font-bold text-navy-800 leading-tight">Studio Odontoiatrico</span>
-                            <span class="text-sm text-medical-600 font-medium">Dott.ssa Francesca Capasso</span>
-                        </div>
-                    </a>
-                </div>
+<body class="bg-white text-gray-800 font-sans">
 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Home</a>
-                    <a href="#prevenzione" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Prevenzione</a>
-                    <a href="#servizi" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">Servizi</a>
-                    <a href="#faq" class="text-gray-700 hover:text-medical-600 font-medium transition-colors">FAQ</a>
-                    <a href="index.html#contatti" class="inline-block bg-medical-600 hover:bg-medical-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-medical-500/30 text-center">
-                        Prenota una visita
-                    </a>
-                </div>
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
 
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-medical-600 focus:outline-none">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
+        <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="sparkles" class="w-6 h-6 text-medical-600"></i>
+            <div class="flex flex-col">
+                <span class="font-bold text-navy-900">Studio Odontoiatrico</span>
+                <span class="text-sm text-medical-600">Dott.ssa Capasso</span>
             </div>
-        </div>
+        </a>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-medical-100 absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Home</a>
-                <a href="#prevenzione" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Prevenzione</a>
-                <a href="#servizi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-medical-600 rounded-md">Servizi</a>
-                <a href="index.html#contatti" class="block w-full mt-4 text-center bg-medical-600 active:bg-medical-700 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-md">
-                    Prenota una visita
-                </a>
-            </div>
-        </div>
-    </nav>
-        <!-- TESTO -->
+        <a href="index.html#contatti"
+           class="bg-medical-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-medical-700">
+            Prenota visita
+        </a>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 bg-gradient-to-r from-light-blue to-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
         <div>
             <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">
                 Radiologia Digitale
@@ -106,17 +69,16 @@
                 Diagnosi rapide, precise e a bassa esposizione ai raggi X
             </p>
 
-            <a href="#contatti"
+            <a href="index.html#contatti"
                class="bg-primary-blue text-white px-6 py-3 rounded-full font-semibold inline-block">
                 Prenota una visita
             </a>
         </div>
 
-        <!-- IMMAGINE A DESTRA -->
         <div>
             <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
                  class="rounded-xl shadow-lg w-full object-cover"
-                 alt="Radiologia digitale dentale">
+                 alt="Radiologia digitale">
         </div>
 
     </div>
@@ -124,7 +86,7 @@
 
 <!-- DESCRIZIONE -->
 <section class="py-20">
-    <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto px-6">
 
         <h2 class="text-3xl font-bold text-primary-blue mb-6">
             A cosa serve la radiologia digitale?
@@ -139,203 +101,105 @@
                 È fondamentale per diagnosticare carie profonde, infezioni, problemi ossei e pianificare trattamenti implantari con massima sicurezza.
             </p>
         </div>
+
     </div>
 </section>
 
 <!-- TECNOLOGIE -->
 <section class="py-20 bg-light-blue">
-    <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6">
 
-        <h2 class="text-3xl font-bold text-primary-blue mb-8">
+        <h2 class="text-3xl font-bold text-primary-blue mb-10 text-center">
             Tecnologie utilizzate
         </h2>
 
         <div class="grid md:grid-cols-3 gap-8">
 
             <div class="bg-white p-6 rounded-xl shadow">
-                <i data-lucide="scan" class="text-primary-blue w-8 h-8 mb-3"></i>
-                <h3 class="font-semibold text-lg mb-2">RX Digitale Endorale</h3>
+                <i data-lucide="scan" class="w-8 h-8 text-primary-blue mb-3"></i>
+                <h3 class="font-semibold mb-2">RX Digitale Endorale</h3>
                 <p class="text-gray-600">Immagini dettagliate dei singoli denti in pochi secondi.</p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow">
-                <i data-lucide="layers" class="text-primary-blue w-8 h-8 mb-3"></i>
-                <h3 class="font-semibold text-lg mb-2">TAC Cone Beam 3D</h3>
+                <i data-lucide="layers" class="w-8 h-8 text-primary-blue mb-3"></i>
+                <h3 class="font-semibold mb-2">TAC Cone Beam 3D</h3>
                 <p class="text-gray-600">Ricostruzione tridimensionale delle arcate dentali.</p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow">
-                <i data-lucide="eye" class="text-primary-blue w-8 h-8 mb-3"></i>
-                <h3 class="font-semibold text-lg mb-2">Ortopanoramica Digitale</h3>
+                <i data-lucide="eye" class="w-8 h-8 text-primary-blue mb-3"></i>
+                <h3 class="font-semibold mb-2">Ortopanoramica Digitale</h3>
                 <p class="text-gray-600">Panoramica completa di denti e ossa mascellari.</p>
             </div>
 
         </div>
+
     </div>
 </section>
 
 <!-- BENEFICI -->
 <section class="py-20">
-    <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6">
 
-        <h2 class="text-3xl font-bold text-primary-blue mb-8">
+        <h2 class="text-3xl font-bold text-primary-blue mb-10 text-center">
             Vantaggi
         </h2>
 
         <div class="grid md:grid-cols-4 gap-6">
 
-            <div class="bg-white border p-5 rounded-lg text-center">
+            <div class="border p-5 rounded-lg text-center">
                 <h3 class="font-semibold mb-2">Bassa esposizione</h3>
                 <p class="text-gray-600 text-sm">Riduzione significativa delle radiazioni.</p>
             </div>
 
-            <div class="bg-white border p-5 rounded-lg text-center">
+            <div class="border p-5 rounded-lg text-center">
                 <h3 class="font-semibold mb-2">Diagnosi immediata</h3>
                 <p class="text-gray-600 text-sm">Risultati disponibili in tempo reale.</p>
             </div>
 
-            <div class="bg-white border p-5 rounded-lg text-center">
+            <div class="border p-5 rounded-lg text-center">
                 <h3 class="font-semibold mb-2">Alta precisione</h3>
                 <p class="text-gray-600 text-sm">Immagini estremamente dettagliate.</p>
             </div>
 
-            <div class="bg-white border p-5 rounded-lg text-center">
+            <div class="border p-5 rounded-lg text-center">
                 <h3 class="font-semibold mb-2">Maggiore sicurezza</h3>
                 <p class="text-gray-600 text-sm">Pianificazione clinica più accurata.</p>
             </div>
 
         </div>
+
     </div>
 </section>
 
-<<footer class="bg-navy-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-400"></i>
-                        <div>
-                            <h3 class="text-xl font-bold">Studio Odontoiatrico</h3>
-                            <p class="text-blue-400">Dott.ssa Francesca Capasso</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
-                    <ul id="footer-links" class="space-y-2 text-gray-400"></ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Contatti</h4>
-                    <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
-                </div>
-            </div>
-            
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-                <p>© 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.</p>
-                <div class="mt-4 md:mt-0">
-                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                </div>
-            </div>
+<!-- FOOTER -->
+<footer class="bg-navy-900 text-white py-16 mt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+        <div>
+            <h3 class="font-bold text-lg mb-2">Studio Odontoiatrico</h3>
+            <p class="text-medical-400">Dott.ssa Francesca Capasso</p>
         </div>
-    </footer>
 
-    <script>
-        // Inizializzazione icone Lucide
-        lucide.createIcons();
+        <div>
+            <h4 class="font-semibold mb-2">Link</h4>
+            <a href="index.html" class="block text-gray-400">Home</a>
+            <a href="index.html#servizi" class="block text-gray-400">Servizi</a>
+        </div>
 
-        // Controllo Menu Mobile aperto/chiuso
-        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
+        <div>
+            <h4 class="font-semibold mb-2">Contatti</h4>
+            <p class="text-gray-400">Via Genova 11</p>
+            <p class="text-gray-400">+39 077 120 1401</p>
+        </div>
 
-        // Dati dell'applicazione
-        const services = [
-            { 
-                title: "Analisi Funzionale ATM", 
-                description: "Valutazione approfondita del movimento mandibolare per individuare click, blocchi o tensioni muscolari.", 
-                icon: "fas fa-sync-alt" 
-            },
-            { 
-                title: "Bite Personalizzati", 
-                description: "Progettazione di dispositivi intraorali su misura per proteggere i denti e rilassare la muscolatura masticatoria.", 
-                icon: "fas fa-teeth-open" 
-            },
-            { 
-                title: "Screening Posturale", 
-                description: "Analisi delle correlazioni tra occlusione dentale e assetto posturale per un benessere globale del corpo.", 
-                icon: "fas fa-street-view" 
-            }
-        ];
-        const benefits = [
-            { 
-                title: "Sollievo dal Dolore", 
-                description: "Riduzione significativa di cefalee muscolo-tensive, dolori cervicali e fastidi articolari.", 
-                icon: "fas fa-medkit" 
-            },
-            { 
-                title: "Protezione Dentale", 
-                description: "Preveniamo l'usura smaltata e le fratture causate dal bruxismo e dal serramento notturno.", 
-                icon: "fas fa-shield-virus" 
-            },
-            { 
-                title: "Riposo Rigenerante", 
-                description: "Miglioriamo la qualità del sonno rilassando le tensioni accumulate durante la giornata.", 
-                icon: "fas fa-bed" 
-            },
-            { 
-                title: "Equilibrio Corporeo", 
-                description: "Un'occlusione corretta favorisce una postura più bilanciata, riducendo gli stress alla colonna vertebrale.", 
-                icon: "fas fa-balance-scale" 
-            }
-        ];
-        const faqItems = [
-            { 
-                question: "Come capisco si soffro di bruxismo?", 
-                answer: "I segnali comuni sono risveglio con mascella affaticata, denti sensibili o usura visibile dei bordi dentali." 
-            },
-            { 
-                question: "Il bite deve essere portato per sempre?", 
-                answer: "Dipende dal caso clinico; spesso è un supporto fondamentale durante la notte per stabilizzare i risultati e proteggere l'articolazione." 
-            }
-        ];
+    </div>
+</footer>
 
-        const footerLinks = [
-            { label: "Home", href: "index.html" },
-            { label: "Prevenzione", href: "#prevenzione" },
-            { label: "Servizi", href: "#servizi" },
-            { label: "FAQ", href: "#faq" }
-        ];
+<script>
+    lucide.createIcons();
+</script>
 
-        // Array social svuotato per rimuovere i cicli di rendering delle icone
-        const socialLinks = [];
-
-        // Rendering dinamico degli elementi della pagina
-        document.getElementById("services-grid").innerHTML = services.map(s => `
-            <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
-                <i class="${s.icon} text-primary-blue text-3xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">${s.title}</h3>
-                <p class="text-gray-600">${s.description}</p>
-            </div>`).join("");
-
-        document.getElementById("benefits-grid").innerHTML = benefits.map(b => `
-            <div class="bg-white rounded-lg p-5 border border-light-blue hover-lift text-center">
-                <i class="${b.icon} text-accent-blue text-2xl mb-3"></i>
-                <h3 class="font-semibold mb-2">${b.title}</h3>
-                <p class="text-gray-600 text-sm">${b.description}</p>
-            </div>`).join("");
-
-        document.getElementById("faq-list").innerHTML = faqItems.map(f => `
-            <div class="bg-white border border-gray-200 rounded-lg p-5">
-                <h3 class="font-semibold text-lg mb-2 text-primary-blue">${f.question}</h3>
-                <p class="text-gray-600">${f.answer}</p>
-            </div>`).join("");
-
-        document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
-            <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
-
-        // Rielabora le icone caricate dinamicamente
-        lucide.createIcons();
-    </script>
 </body>
 </html>
