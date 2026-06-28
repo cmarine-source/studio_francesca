@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi di Sterilizzazione - Studio Dott.ssa Francesca Capasso</title>
+
+    <meta name="description" content="Protocolli di sterilizzazione avanzati e strumenti monouso per garantire massima sicurezza e igiene nello studio odontoiatrico.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1e3a8a', 900: '#0c1e3d' },
+                        medical: { 600: '#2563eb', 700: '#1d4ed8' },
+                        "light-blue": "#DBEAFE",
+                        "secondary-gray": "#F3F4F6"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+        <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="sparkles" class="text-medical-600"></i>
+            <div>
+                <p class="font-bold text-navy-800">Studio Odontoiatrico</p>
+                <p class="text-sm text-medical-600">Dott.ssa Francesca Capasso</p>
+            </div>
+        </a>
+
+        <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-medical-600">Home</a>
+            <a href="#info" class="hover:text-medical-600">Sterilizzazione</a>
+            <a href="#sicurezza" class="hover:text-medical-600">Sicurezza</a>
+            <a href="index.html#contatti" class="bg-medical-600 text-white px-5 py-2 rounded-full">
+                Prenota visita
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- TESTO -->
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4">
+                Sistemi di Sterilizzazione
+            </h1>
+
+            <p class="text-xl text-gray-600 mb-6">
+                Massima sicurezza igienica grazie a protocolli avanzati e controlli rigorosi
+            </p>
+
+            <a href="index.html#contatti"
+               class="bg-medical-600 text-white px-6 py-3 rounded-full font-semibold inline-block">
+                Prenota una visita
+            </a>
+        </div>
+
+        <!-- IMMAGINE -->
+        <div>
+            <img src="https://i.imgur.com/vxzV6bG.jpeg"
+                 class="rounded-xl shadow-lg w-full object-cover"
+                 alt="Sterilizzazione strumenti odontoiatrici">
+        </div>
+
+    </div>
+</section>
+
+<!-- INFO -->
+<section id="info" class="py-20 bg-secondary-gray">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-6">
+            Cos’è la sterilizzazione odontoiatrica?
+        </h2>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+            La sterilizzazione è un insieme di procedure che eliminano completamente batteri, virus e microrganismi dagli strumenti utilizzati in studio.
+            È fondamentale per garantire la sicurezza del paziente e del personale.
+        </p>
+
+    </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-8">
+            Il nostro protocollo
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="p-6 bg-white border rounded-xl shadow">
+                <i data-lucide="trash-2" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Decontaminazione</h3>
+                <p class="text-gray-600">Rimozione dei residui biologici dagli strumenti.</p>
+            </div>
+
+            <div class="p-6 bg-white border rounded-xl shadow">
+                <i data-lucide="droplets" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Lavaggio e disinfezione</h3>
+                <p class="text-gray-600">Pulizia approfondita con soluzioni specifiche.</p>
+            </div>
+
+            <div class="p-6 bg-white border rounded-xl shadow">
+                <i data-lucide="shield-check" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Sterilizzazione finale</h3>
+                <p class="text-gray-600">Autoclave di classe B per eliminazione totale dei patogeni.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SICUREZZA -->
+<section id="sicurezza" class="py-20 bg-light-blue">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-8">
+            Garanzia di sicurezza
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Monouso</h3>
+                <p class="text-sm text-gray-600">Materiali sterili e usa e getta.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Controlli costanti</h3>
+                <p class="text-sm text-gray-600">Verifica continua dei protocolli.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Autoclave certificata</h3>
+                <p class="text-sm text-gray-600">Sterilizzazione a norma europea.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Ambiente protetto</h3>
+                <p class="text-sm text-gray-600">Massima igiene in ogni area dello studio.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p>© 2026 Studio Odontoiatrico Dott.ssa Francesca Capasso</p>
+        <a href="index.html#contatti" class="text-medical-400 block mt-2">
+            Contatti
+        </a>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
