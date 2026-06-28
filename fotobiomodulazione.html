@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotobiomodulazione - Studio Dott.ssa Francesca Capasso</title>
+
+    <meta name="description" content="Fotobiomodulazione laser per ridurre infiammazioni, tensioni muscolari e migliorare il recupero dei tessuti in modo non invasivo.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1e3a8a', 900: '#0c1e3d' },
+                        medical: { 600: '#2563eb', 700: '#1d4ed8' },
+                        "light-blue": "#DBEAFE",
+                        "secondary-gray": "#F3F4F6"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+        <a href="index.html" class="flex items-center space-x-2">
+            <i data-lucide="sparkles" class="text-medical-600"></i>
+            <div>
+                <p class="font-bold text-navy-800">Studio Odontoiatrico</p>
+                <p class="text-sm text-medical-600">Dott.ssa Francesca Capasso</p>
+            </div>
+        </a>
+
+        <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-medical-600">Home</a>
+            <a href="#info" class="hover:text-medical-600">Info</a>
+            <a href="#benefici" class="hover:text-medical-600">Benefici</a>
+            <a href="index.html#contatti" class="bg-medical-600 text-white px-5 py-2 rounded-full">
+                Prenota visita
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4">
+                Fotobiomodulazione
+            </h1>
+
+            <p class="text-xl text-gray-600 mb-6">
+                Terapia con luce laser per ridurre dolore, infiammazione e accelerare la guarigione
+            </p>
+
+            <a href="index.html#contatti"
+               class="bg-medical-600 text-white px-6 py-3 rounded-full font-semibold inline-block">
+                Prenota una visita
+            </a>
+        </div>
+
+        <div>
+            <img src="https://i.imgur.com/TXC0MIn.jpeg"
+                 class="rounded-xl shadow-lg w-full object-cover"
+                 alt="Terapia laser odontoiatrica">
+        </div>
+
+    </div>
+</section>
+
+<!-- INFO -->
+<section id="info" class="py-20 bg-secondary-gray">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-6">
+            Cos’è la fotobiomodulazione?
+        </h2>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+            La fotobiomodulazione è una terapia non invasiva che utilizza luce laser a bassa intensità per stimolare le cellule,
+            ridurre l’infiammazione e accelerare i processi di guarigione dei tessuti.
+        </p>
+
+    </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-8">
+            Come funziona
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="p-6 bg-white border rounded-xl shadow">
+                <i data-lucide="zap" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Stimolazione cellulare</h3>
+                <p class="text-gray-600">La luce laser attiva il metabolismo delle cellule.</p>
+            </div>
+
+            <div class="p-6 bg-white border rounded-xl shadow">
+                <i data-lucide="activity" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Riduzione infiammazione</h3>
+                <p class="text-gray-600">Diminuisce gonfiore e dolore in modo naturale.</p>
+            </div>
+
+            <div class="p-6 bg-white border rounded-xl shadow">
+                <i data-lucide="refresh-cw" class="text-medical-600 w-8 h-8 mb-3"></i>
+                <h3 class="font-semibold mb-2">Rigenerazione tessuti</h3>
+                <p class="text-gray-600">Accelera la guarigione dopo trattamenti o traumi.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BENEFICI -->
+<section id="benefici" class="py-20 bg-light-blue">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-3xl font-bold text-navy-800 mb-8">
+            Benefici
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Nessun dolore</h3>
+                <p class="text-sm text-gray-600">Trattamento completamente indolore.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Guarigione rapida</h3>
+                <p class="text-sm text-gray-600">Riduce i tempi di recupero.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Riduzione infiammazione</h3>
+                <p class="text-sm text-gray-600">Effetto antinfiammatorio naturale.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg border text-center">
+                <h3 class="font-semibold mb-2">Sicura</h3>
+                <p class="text-sm text-gray-600">Tecnologia non invasiva e sicura.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p>© 2026 Studio Odontoiatrico Dott.ssa Francesca Capasso</p>
+        <a href="index.html#contatti" class="text-medical-400 block mt-2">
+            Contatti
+        </a>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
