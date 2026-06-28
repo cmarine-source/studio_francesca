@@ -208,9 +208,134 @@
     </div>
 </section>
 
-<script>
-    lucide.createIcons();
-</script>
+<<footer class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="sparkles" class="h-8 w-8 text-medical-400"></i>
+                        <div>
+                            <h3 class="text-xl font-bold">Studio Odontoiatrico</h3>
+                            <p class="text-blue-400">Dott.ssa Francesca Capasso</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">Professionalità e tecnologia al servizio del tuo sorriso.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Link Rapidi</h4>
+                    <ul id="footer-links" class="space-y-2 text-gray-400"></ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contatti</h4>
+                    <p class="text-gray-400">Via Genova 11<br>+39 077 120 1401</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>© 2026 Studio Dott.ssa Francesca Capasso. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Inizializzazione icone Lucide
+        lucide.createIcons();
+
+        // Controllo Menu Mobile aperto/chiuso
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        // Dati dell'applicazione
+        const services = [
+            { 
+                title: "Analisi Funzionale ATM", 
+                description: "Valutazione approfondita del movimento mandibolare per individuare click, blocchi o tensioni muscolari.", 
+                icon: "fas fa-sync-alt" 
+            },
+            { 
+                title: "Bite Personalizzati", 
+                description: "Progettazione di dispositivi intraorali su misura per proteggere i denti e rilassare la muscolatura masticatoria.", 
+                icon: "fas fa-teeth-open" 
+            },
+            { 
+                title: "Screening Posturale", 
+                description: "Analisi delle correlazioni tra occlusione dentale e assetto posturale per un benessere globale del corpo.", 
+                icon: "fas fa-street-view" 
+            }
+        ];
+        const benefits = [
+            { 
+                title: "Sollievo dal Dolore", 
+                description: "Riduzione significativa di cefalee muscolo-tensive, dolori cervicali e fastidi articolari.", 
+                icon: "fas fa-medkit" 
+            },
+            { 
+                title: "Protezione Dentale", 
+                description: "Preveniamo l'usura smaltata e le fratture causate dal bruxismo e dal serramento notturno.", 
+                icon: "fas fa-shield-virus" 
+            },
+            { 
+                title: "Riposo Rigenerante", 
+                description: "Miglioriamo la qualità del sonno rilassando le tensioni accumulate durante la giornata.", 
+                icon: "fas fa-bed" 
+            },
+            { 
+                title: "Equilibrio Corporeo", 
+                description: "Un'occlusione corretta favorisce una postura più bilanciata, riducendo gli stress alla colonna vertebrale.", 
+                icon: "fas fa-balance-scale" 
+            }
+        ];
+        const faqItems = [
+            { 
+                question: "Come capisco si soffro di bruxismo?", 
+                answer: "I segnali comuni sono risveglio con mascella affaticata, denti sensibili o usura visibile dei bordi dentali." 
+            },
+            { 
+                question: "Il bite deve essere portato per sempre?", 
+                answer: "Dipende dal caso clinico; spesso è un supporto fondamentale durante la notte per stabilizzare i risultati e proteggere l'articolazione." 
+            }
+        ];
+
+        const footerLinks = [
+            { label: "Home", href: "index.html" },
+            { label: "Prevenzione", href: "#prevenzione" },
+            { label: "Servizi", href: "#servizi" },
+            { label: "FAQ", href: "#faq" }
+        ];
+
+        // Array social svuotato per rimuovere i cicli di rendering delle icone
+        const socialLinks = [];
+
+        // Rendering dinamico degli elementi della pagina
+        document.getElementById("services-grid").innerHTML = services.map(s => `
+            <div class="bg-white rounded-xl p-6 shadow-md hover-lift text-center">
+                <i class="${s.icon} text-primary-blue text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">${s.title}</h3>
+                <p class="text-gray-600">${s.description}</p>
+            </div>`).join("");
+
+        document.getElementById("benefits-grid").innerHTML = benefits.map(b => `
+            <div class="bg-white rounded-lg p-5 border border-light-blue hover-lift text-center">
+                <i class="${b.icon} text-accent-blue text-2xl mb-3"></i>
+                <h3 class="font-semibold mb-2">${b.title}</h3>
+                <p class="text-gray-600 text-sm">${b.description}</p>
+            </div>`).join("");
+
+        document.getElementById("faq-list").innerHTML = faqItems.map(f => `
+            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                <h3 class="font-semibold text-lg mb-2 text-primary-blue">${f.question}</h3>
+                <p class="text-gray-600">${f.answer}</p>
+            </div>`).join("");
+
+        document.getElementById("footer-links").innerHTML = footerLinks.map(l => `
+            <li><a href="${l.href}" class="hover:text-white transition-colors">${l.label}</a></li>`).join("");
+
+        // Rielabora le icone caricate dinamicamente
+        lucide.createIcons();
+    </script>
 </body>
 </html>
